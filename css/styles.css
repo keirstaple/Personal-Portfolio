@@ -11,30 +11,32 @@
 
 .container {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   width: 100vw; }
 
 .side-bar {
+  flex: 0;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  height: 100vh;
-  width: 22vw;
   border: solid 1px; }
+  .side-bar h1 {
+    text-align: center; }
+  .side-bar ul li {
+    list-style-type: none;
+    margin: 10vh; }
 
-.notSidebar {
+.main {
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%; }
-
-.unopened {
-  height: 15vh;
-  width: 50vw;
-  border: solid 1px; }
-
-.opened {
-  display: none;
-  width: 50vw; }
+  flex-direction: column; }
+  .main .banner {
+    flex: 1; }
+  .main .unopened {
+    flex: 1;
+    border: solid 1px; }
+  .main .opened {
+    flex: 1;
+    display: none; }
 
 /*# sourceMappingURL=styles.css.map */
