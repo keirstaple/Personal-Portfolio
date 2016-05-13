@@ -34,13 +34,21 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     border: solid 1px;
+    h1{
+      flex: 1;
+    }
     ul {
+      flex: 2;
       list-style-type: none;
+      text-decoration: underline;
       padding: 0;
+      left: 10%;
+      top: 50%;
       li{
         text-align: center;
+        margin: 0 0 15px 0;
       }
     }
   }
