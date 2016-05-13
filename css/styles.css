@@ -9,34 +9,41 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  padding: 0;
+  margin: 0; }
+
 .container {
   display: flex;
-  flex-direction: row;
-  height: 100vh;
-  width: 100vw; }
+  flex-direction: row; }
 
-.side-bar {
-  flex: 0;
-  display: flex;
-  flex-direction: column;
-  border: solid 1px; }
-  .side-bar h1 {
-    text-align: center; }
-  .side-bar ul li {
-    list-style-type: none;
-    margin: 10vh; }
+nav {
+  flex: 0 0 10vw; }
+  nav .side-bar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px; }
+    nav .side-bar ul {
+      list-style-type: none;
+      padding: 0; }
+      nav .side-bar ul li {
+        text-align: center; }
 
 .main {
-  flex: 1;
+  flex: 1 1;
   display: flex;
   flex-direction: column; }
-  .main .banner {
-    flex: 1; }
   .main .unopened {
-    flex: 1;
     border: solid 1px; }
   .main .opened {
-    flex: 1;
     display: none; }
 
 /*# sourceMappingURL=styles.css.map */
