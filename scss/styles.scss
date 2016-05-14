@@ -34,6 +34,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
     // justify-content: space-between;
     border: solid 1px;
     h1{
@@ -49,6 +50,7 @@ nav{
       li{
         text-align: center;
         margin: 0 0 15px 0;
+        color: #B2841B;
       }
     }
   }
@@ -58,12 +60,8 @@ nav{
   display: flex;
   flex-direction: column;
   .banner {
-  }
-  .unopened{
-    border: solid 1px;
-  }
-
-  .opened {
-    display: none;
+    height: 100vh;
+    background-image: url("../img/flight-clouds-airplane-view.jpg");
+    background-size: 100%;
   }
 }
