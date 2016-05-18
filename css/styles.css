@@ -33,6 +33,9 @@ nav {
     border: solid 1px; }
     nav .side-bar h1 {
       flex: 1; }
+    nav .side-bar img {
+      height: 125px;
+      width: auto; }
     nav .side-bar ul {
       flex: 2;
       list-style-type: none;

@@ -30,15 +30,17 @@ nav{
     left: 0;
     width: 10vw;
     height: 100vh;
-    //add a max-width for the side-bar here in pixels
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
-    // justify-content: space-between;
     border: solid 1px;
     h1{
       flex: 1;
+    }
+    img{
+      height: 125px;
+      width: auto;
     }
     ul {
       flex: 2;
