@@ -1,6 +1,7 @@
 $(document).ready(function(){
+  //This snippet will watch for a click on an a tag and smoothly scroll down to its anchor
   $('a[href^="#"]').on('click', function(event) {
-    var target = $(this.href);
+    var target = $($(this).attr('href'));
     if( target.length ) {
         event.preventDefault();
         $('html, body').animate({
