@@ -4,6 +4,7 @@ html
   head
     title Keir Staple
     meta(charset="utf-8" name="viewport" content="width=device-width")
+    link(href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css')
     link(rel="stylesheet" href="css/styles.css")
     script(src="js/jquery-1.12.3.js")
     script(src="js/scripts.js")
@@ -12,20 +13,17 @@ html
     div(class="container")
       nav(role="navigation")
         div(class="side-bar")
-          h1 KS
-           a(href="#landing-banner") 
-            img(src="img/profile-diamond.png" id="profile-image" alt="Image of Keir")
+         a(href="#landing-banner") 
+          img(src="img/profile-diamond.png" id="profile-image" alt="Image of Keir")
           ul
             li 
               a(href='#about-section') About
             li 
               a(href='#design-section') Design
             li 
-              a(href='#programming-section') Programming
-            li 
-              a(href='#writing-section') Writing
-            li 
-              a(href='#ilike-section') I Like...
+              a(href='#code-section') Code
+            li
+              a(href="#contact-section") Contact
       div(class="main")
         div(id="landing-banner" class="banner section")
           h1 Keir Staple
@@ -38,12 +36,13 @@ html
         div(class="section" id="design-section")
           h1 DESIGN
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        div(class="section" id="programming-section")
-          h1 PROGRAMMING
+        div(class="section" id="code-section")
+          h1 CODE
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        div(class="section" id="writing-section")
-          h1 WRITING
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        div(class="section" id="ilike-section")
-          h1 I LIKE...
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        div(class="section" id="contact-section")
+          div(class="video-container")
+            div(class="filter")
+            video(autoplay loop class="fillWidth")
+              source(src="img/video/Ink_in_water_2.mp4" type="video/mp4")
+            div(class="poster hidden")
+              //- img(src="img/icons/blacktocat.png" class="pulse")

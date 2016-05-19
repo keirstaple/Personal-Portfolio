@@ -9,6 +9,12 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: Porto;
+  src: url("../fonts/Porto_400.ttf"); }
+@font-face {
+  font-family: Moderne Sans;
+  src: url("../fonts/Moderne_Sans.ttf"); }
 body {
   padding: 0;
   margin: 0; }
@@ -25,13 +31,14 @@ nav {
     bottom: 0;
     left: 0;
     width: 10vw;
+    min-width: 115px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: #292929;
     border: solid 1px; }
-    nav .side-bar h1 {
+    nav .side-bar a {
       flex: 1; }
     nav .side-bar img {
       height: 125px;
@@ -39,7 +46,7 @@ nav {
     nav .side-bar ul {
       flex: 2;
       list-style-type: none;
-      text-decoration: underline;
+      text-decoration: none;
       padding: 0;
       left: 10%;
       top: 50%; }
@@ -47,14 +54,87 @@ nav {
         text-align: center;
         margin: 0 0 15px 0;
         color: #B2841B; }
+      nav .side-bar ul a {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-family: 'Karla', sans-serif; }
 
 .main {
   flex: 1 1;
   display: flex;
   flex-direction: column; }
+  .main .section {
+    height: 100vh; }
   .main .banner {
     height: 100vh;
     background-image: url("../img/flight-clouds-airplane-view.jpg");
     background-size: 100%; }
+    .main .banner h1, .main .banner h3 {
+      font-family: Moderne Sans; }
+  .main .pulse {
+    animation-name: pulse_animation;
+    animation-duration: 5000ms;
+    transform-origin: 70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+
+.homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative; }
+
+.no-video .video-container video,
+.touch .video-container video {
+  display: none; }
+
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important; }
+
+.video-container {
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000; }
+
+.video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute; }
+
+.video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%; }
+
+.video-container video {
+  position: absolute;
+  z-index: 0;
+  bottom: 0; }
+
+.video-container video.fillWidth {
+  width: 100%; }
+
+@keyframes pulse_animation {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1); }
+  40% {
+    transform: scale(1.08); }
+  50% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1); }
+  70% {
+    transform: scale(1.05); }
+  80% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
 
 /*# sourceMappingURL=styles.css.map */
