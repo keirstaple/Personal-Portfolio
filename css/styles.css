@@ -21,24 +21,34 @@ body {
 
 .container {
   display: flex;
-  flex-direction: row;
   font: 12px; }
+  @media screen and (min-width: 320px) {
+    .container {
+      flex-direction: column; } }
+  @media screen and (min-width: 480px) {
+    .container {
+      flex-direction: row; } }
 
 nav {
   flex: 0 0 10vw; }
   nav .nav-bar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 10vw;
-    min-width: 115px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #292929;
-    border: solid 1px; }
+    border: solid 1px;
+    display: flex; }
+    @media screen and (min-width: 320px) {
+      nav .nav-bar {
+        flex-direction: row;
+        align-items: center; } }
+    @media screen and (min-width: 480px) {
+      nav .nav-bar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 10vw;
+        min-width: 115px;
+        height: 100vh;
+        flex-direction: column; } }
     nav .nav-bar a {
       flex: 1; }
     nav .nav-bar img {
@@ -60,7 +70,6 @@ nav {
         color: #FFFFFF;
         font-family: 'Karla', sans-serif; }
     nav .nav-bar .fa-bars {
-      font: 10em;
       color: white; }
 
 .main {

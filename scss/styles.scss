@@ -25,6 +25,12 @@
 }
 //end fonts
 
+//variables
+$break-small: 320px;
+$break-medium: 480px;
+$break-large: 1200px;
+//
+
 
 body{
   padding: 0;
@@ -32,26 +38,36 @@ body{
 }
 .container {
   display: flex;
-  flex-direction: row;
   font: 12px;
+  @media screen and (min-width: $break-small) {
+    flex-direction: column
+  }
+  @media screen and (min-width: $break-medium) {
+    flex-direction: row;
+  }
 }
 
-//sidebar
+//navbar
 nav{
   flex: 0 0 10vw;
   .nav-bar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 10vw;
-    min-width: 115px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #292929;
     border: solid 1px;
+    display: flex;
+    @media screen and (min-width: $break-small) {
+      flex-direction: row;
+      align-items: center;
+    }
+    @media screen and (min-width: $break-medium){
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 10vw;
+      min-width: 115px;
+      height: 100vh;
+      flex-direction: column;
+    }
     a{
       flex: 1;
     }
@@ -78,7 +94,6 @@ nav{
       }
     }
     .fa-bars {
-      font: 10em;
       color: white;
     }
   }
