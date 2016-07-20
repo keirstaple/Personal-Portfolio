@@ -21,7 +21,8 @@ body {
 
 .container {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  font: 12px; }
 
 nav {
   flex: 0 0 10vw; }
@@ -64,10 +65,13 @@ nav {
   display: flex;
   flex-direction: column; }
   .main .section {
-    height: 100vh; }
+    height: 100vh;
+    background-color: #FEFEF2;
+    border-bottom: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: #C14A3C; }
   .main .banner {
     height: 100vh;
-    background-image: url("../img/flight-clouds-airplane-view.jpg");
     background-size: 100%; }
     .main .banner h1, .main .banner h3 {
       font-family: Moderne Sans; }
@@ -77,47 +81,6 @@ nav {
     transform-origin: 70% 70%;
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
-
-.homepage-hero-module {
-  border-right: none;
-  border-left: none;
-  position: relative; }
-
-.no-video .video-container video,
-.touch .video-container video {
-  display: none; }
-
-.no-video .video-container .poster,
-.touch .video-container .poster {
-  display: block !important; }
-
-.video-container {
-  position: relative;
-  bottom: 0%;
-  left: 0%;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  background: #000; }
-
-.video-container .poster img {
-  width: 100%;
-  bottom: 0;
-  position: absolute; }
-
-.video-container .filter {
-  z-index: 100;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  width: 100%; }
-
-.video-container video {
-  position: absolute;
-  z-index: 0;
-  bottom: 0; }
-
-.video-container video.fillWidth {
-  width: 100%; }
 
 @keyframes pulse_animation {
   0% {
