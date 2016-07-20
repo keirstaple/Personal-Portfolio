@@ -54,23 +54,33 @@ nav {
     nav .nav-bar img {
       height: 125px;
       width: auto; }
-    nav .nav-bar ul {
+      @media screen and (min-width: 320px) {
+        nav .nav-bar img {
+          height: 75px;
+          width: auto; } }
+    nav .nav-bar ul, nav .nav-bar .nav-links {
       flex: 2;
       list-style-type: none;
       text-decoration: none;
       padding: 0;
       left: 10%;
       top: 50%; }
-      nav .nav-bar ul li {
+      @media screen and (max-width: 480px) {
+        nav .nav-bar ul, nav .nav-bar .nav-links {
+          display: none; } }
+      nav .nav-bar ul li, nav .nav-bar .nav-links li {
         text-align: center;
         margin: 0 0 15px 0;
         color: #B2841B; }
-      nav .nav-bar ul a {
+      nav .nav-bar ul a, nav .nav-bar .nav-links a {
         text-decoration: none;
         color: #FFFFFF;
         font-family: 'Karla', sans-serif; }
     nav .nav-bar .fa-bars {
       color: white; }
+      @media screen and (min-width: 480px) {
+        nav .nav-bar .fa-bars {
+          display: none; } }
 
 .main {
   flex: 1 1;
