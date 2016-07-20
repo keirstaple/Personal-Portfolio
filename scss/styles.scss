@@ -39,7 +39,7 @@ body{
 //sidebar
 nav{
   flex: 0 0 10vw;
-  .side-bar {
+  .nav-bar {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -76,6 +76,10 @@ nav{
         color: #FFFFFF;
         font-family: 'Karla', sans-serif;
       }
+    }
+    .fa-bars {
+      font: 10em;
+      color: white;
     }
   }
 }

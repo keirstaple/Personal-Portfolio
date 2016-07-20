@@ -5,18 +5,18 @@ html
     title Keir Staple
     meta(charset="utf-8" name="viewport" content="width=device-width")
     link(href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css')
+    link(href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" rel="stylesheet")
     link(rel="stylesheet" href="css/styles.css")
     script(src="js/jquery-1.12.3.js")
-    script (src="https://use.fontawesome.com/81b3624c07.js")
     script(src="js/scripts.js")
     
   body
     div(class="container")
       nav(role="navigation")
-        div(class="side-bar")
-         a(href="#landing-banner") 
-          img(src="img/profile-diamond.png" id="profile-image" alt="Image of Keir")
-          ul
+        div(class="nav-bar")
+          a(href="#landing-banner") 
+            img(src="img/profile-diamond.png" id="profile-image" alt="Image of Keir")
+          ul(class="nav-links")
             li 
               a(href='#about-section') About
             li 
@@ -25,6 +25,7 @@ html
               a(href='#code-section') Code
             li
               a(href="#contact-section") Contact
+          i(class="fa fa-bars" aria-hidden="true")
       div(class="main")
         div(id="landing-banner" class="banner section")
           h1 Keir Staple

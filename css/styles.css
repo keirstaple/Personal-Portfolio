@@ -26,7 +26,7 @@ body {
 
 nav {
   flex: 0 0 10vw; }
-  nav .side-bar {
+  nav .nav-bar {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -39,26 +39,29 @@ nav {
     align-items: center;
     background-color: #292929;
     border: solid 1px; }
-    nav .side-bar a {
+    nav .nav-bar a {
       flex: 1; }
-    nav .side-bar img {
+    nav .nav-bar img {
       height: 125px;
       width: auto; }
-    nav .side-bar ul {
+    nav .nav-bar ul {
       flex: 2;
       list-style-type: none;
       text-decoration: none;
       padding: 0;
       left: 10%;
       top: 50%; }
-      nav .side-bar ul li {
+      nav .nav-bar ul li {
         text-align: center;
         margin: 0 0 15px 0;
         color: #B2841B; }
-      nav .side-bar ul a {
+      nav .nav-bar ul a {
         text-decoration: none;
         color: #FFFFFF;
         font-family: 'Karla', sans-serif; }
+    nav .nav-bar .fa-bars {
+      font: 10em;
+      color: white; }
 
 .main {
   flex: 1 1;
