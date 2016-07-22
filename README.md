@@ -10,7 +10,7 @@ _This is my personal portfolio page. It displays my skills and some projects I h
 
 ## Setup/Installation Requirements
 
-* _Fork this project from https://github.com/keirstaple/personal-portfolio.git_
+* _Fork this project from https://github.com/keirstaple/Personal-Portfolio.git_
 * _Clone this project to your local drive_
 * _Create a new branch for your personal edits and viewing_
 * _If you want edits to be included, push them back to your Github account and create a pull request_
