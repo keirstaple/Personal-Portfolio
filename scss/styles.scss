@@ -89,11 +89,14 @@ nav{
       padding: 0;
       left: 10%;
       top: 50%;
-      @media screen and (max-width: $break-small) {
-        overflow: auto;
-      }
+      // @media screen and (max-width: $break-small) {
+      //   overflow: auto;
+      // }
       @media screen and (max-width: $break-medium) {
         display: none;
+      }
+      @media screen and (min-width: $break-medium) {
+        flex: 2;
       }
       li{
         text-align: center;

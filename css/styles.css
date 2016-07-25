@@ -66,12 +66,12 @@ nav {
       padding: 0;
       left: 10%;
       top: 50%; }
-      @media screen and (max-width: 320px) {
-        nav .nav-bar ul, nav .nav-bar .nav-links {
-          overflow: auto; } }
       @media screen and (max-width: 800px) {
         nav .nav-bar ul, nav .nav-bar .nav-links {
           display: none; } }
+      @media screen and (min-width: 800px) {
+        nav .nav-bar ul, nav .nav-bar .nav-links {
+          flex: 2; } }
       nav .nav-bar ul li, nav .nav-bar .nav-links li {
         text-align: center;
         margin: 0 0 15px 0;
