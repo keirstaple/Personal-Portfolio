@@ -34,7 +34,6 @@ nav {
   nav .nav-bar {
     background-color: #292929;
     border: solid 1px;
-    display: flex;
     padding: 20px; }
     @media screen and (min-width: 320px) {
       nav .nav-bar {
@@ -43,6 +42,7 @@ nav {
     @media screen and (min-width: 800px) {
       nav .nav-bar {
         position: fixed;
+        display: flex;
         top: 0;
         bottom: 0;
         left: 0;
@@ -50,22 +50,25 @@ nav {
         min-width: 115px;
         height: 100vh;
         flex-direction: column; } }
-    nav .nav-bar a {
-      flex: 1; }
-    nav .nav-bar img {
+    @media screen and (min-width: 800px) {
+      nav .nav-bar a {
+        flex: 1; } }
+    nav .nav-bar a, nav .nav-bar img {
       height: 125px;
       width: auto; }
       @media screen and (min-width: 320px) {
-        nav .nav-bar img {
+        nav .nav-bar a, nav .nav-bar img {
           height: 75px;
           width: auto; } }
     nav .nav-bar ul, nav .nav-bar .nav-links {
-      flex: 2;
       list-style-type: none;
       text-decoration: none;
       padding: 0;
       left: 10%;
       top: 50%; }
+      @media screen and (max-width: 320px) {
+        nav .nav-bar ul, nav .nav-bar .nav-links {
+          overflow: auto; } }
       @media screen and (max-width: 800px) {
         nav .nav-bar ul, nav .nav-bar .nav-links {
           display: none; } }
@@ -78,6 +81,7 @@ nav {
         color: #FFFFFF;
         font-family: 'Karla', sans-serif; }
     nav .nav-bar .fa-bars {
+      float: right;
       color: white; }
       @media screen and (min-width: 800px) {
         nav .nav-bar .fa-bars {
