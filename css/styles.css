@@ -34,32 +34,34 @@ nav {
   nav .nav-bar {
     background-color: #292929;
     border: solid 1px;
-    padding: 20px; }
-    @media screen and (min-width: 320px) {
-      nav .nav-bar {
-        flex-direction: row;
-        align-items: center; } }
+    padding: 20px;
+    display: flex;
+    flex-direction: column; }
     @media screen and (min-width: 800px) {
       nav .nav-bar {
         position: fixed;
-        display: flex;
         top: 0;
         bottom: 0;
         left: 0;
         width: 10vw;
         min-width: 115px;
-        height: 100vh;
-        flex-direction: column; } }
-    @media screen and (min-width: 800px) {
-      nav .nav-bar a {
-        flex: 1; } }
-    nav .nav-bar a, nav .nav-bar img {
+        height: 100vh; } }
+    @media screen and (min-width: 320px) {
+      nav .nav-bar .picture-menu-icon {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center; } }
+    nav .nav-bar .picture-menu-icon a, nav .nav-bar .picture-menu-icon img {
       height: 125px;
       width: auto; }
       @media screen and (min-width: 320px) {
-        nav .nav-bar a, nav .nav-bar img {
+        nav .nav-bar .picture-menu-icon a, nav .nav-bar .picture-menu-icon img {
           height: 75px;
           width: auto; } }
+    @media screen and (min-width: 800px) {
+      nav .nav-bar .picture-menu-icon {
+        flex: 1; } }
     nav .nav-bar ul, nav .nav-bar .nav-links {
       list-style-type: none;
       text-decoration: none;

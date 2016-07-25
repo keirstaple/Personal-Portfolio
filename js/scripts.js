@@ -11,8 +11,8 @@ $(document).ready(function(){
   });
   //Toggle the menu icon when in mobile view
   $('.fa-bars').on('click', function() {
-    console.log('clicked');
+    // console.log('clicked');
 
-    $('.nav-links').toggle(200);
+    $('.nav-links').toggle();
   });
 });

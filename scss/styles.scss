@@ -53,45 +53,49 @@ nav{
   .nav-bar {
     background-color: #292929;
     border: solid 1px;
-    // display: flex;
     padding: 20px;
-    @media screen and (min-width: $break-small) {
-      flex-direction: row;
-      align-items: center;
-    }
+    display: flex;
+    flex-direction: column;
+
     @media screen and (min-width: $break-medium){
       position: fixed;
-      display: flex;
       top: 0;
       bottom: 0;
       left: 0;
       width: 10vw;
       min-width: 115px;
       height: 100vh;
-      flex-direction: column;
     }
-    a{
+    .picture-menu-icon {
+      @media screen and (min-width: $break-small) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+      }
+      a, img{
+        height: 125px;
+        width: auto;
+        @media screen and (min-width: $break-small) {
+          height: 75px;
+          width: auto;
+        }
+      }
       @media screen and (min-width: $break-medium){
         flex: 1;
+
       }
     }
-    a, img{
-      height: 125px;
-      width: auto;
-      @media screen and (min-width: $break-small) {
-        height: 75px;
-        width: auto;
-      }
-    }
+    // a{
+    //
+    // }
+
     ul, .nav-links {
       list-style-type: none;
       text-decoration: none;
       padding: 0;
       left: 10%;
       top: 50%;
-      // @media screen and (max-width: $break-small) {
-      //   overflow: auto;
-      // }
       @media screen and (max-width: $break-medium) {
         display: none;
       }
