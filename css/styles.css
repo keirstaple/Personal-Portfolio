@@ -46,22 +46,25 @@ nav {
         width: 10vw;
         min-width: 115px;
         height: 100vh; } }
-    @media screen and (min-width: 320px) {
-      nav .nav-bar .picture-menu-icon {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: center; } }
-    nav .nav-bar .picture-menu-icon a, nav .nav-bar .picture-menu-icon img {
-      height: 125px;
-      width: auto; }
+    nav .nav-bar .picture-menu-icon {
+      display: flex;
+      justify-content: space-between;
+      height: 50px; }
       @media screen and (min-width: 320px) {
-        nav .nav-bar .picture-menu-icon a, nav .nav-bar .picture-menu-icon img {
-          height: 75px;
-          width: auto; } }
-    @media screen and (min-width: 800px) {
-      nav .nav-bar .picture-menu-icon {
-        flex: 1; } }
+        nav .nav-bar .picture-menu-icon {
+          flex-direction: row;
+          align-items: center; } }
+      @media screen and (min-width: 800px) {
+        nav .nav-bar .picture-menu-icon {
+          flex-direction: column;
+          flex: 1; } }
+      nav .nav-bar .picture-menu-icon img {
+        height: 125px;
+        width: auto; }
+        @media screen and (min-width: 320px) {
+          nav .nav-bar .picture-menu-icon img {
+            height: 75px;
+            width: auto; } }
     nav .nav-bar ul, nav .nav-bar .nav-links {
       list-style-type: none;
       text-decoration: none;

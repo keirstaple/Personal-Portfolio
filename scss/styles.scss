@@ -56,7 +56,7 @@ nav{
     padding: 20px;
     display: flex;
     flex-direction: column;
-
+    // height: 10vh;
     @media screen and (min-width: $break-medium){
       position: fixed;
       top: 0;
@@ -67,13 +67,18 @@ nav{
       height: 100vh;
     }
     .picture-menu-icon {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
       @media screen and (min-width: $break-small) {
-        display: flex;
-        justify-content: space-between;
         flex-direction: row;
         align-items: center;
       }
-      a, img{
+      @media screen and (min-width: $break-medium){
+        flex-direction: column;
+        flex: 1;
+      }
+      img{
         height: 125px;
         width: auto;
         @media screen and (min-width: $break-small) {
@@ -81,14 +86,8 @@ nav{
           width: auto;
         }
       }
-      @media screen and (min-width: $break-medium){
-        flex: 1;
 
-      }
     }
-    // a{
-    //
-    // }
 
     ul, .nav-links {
       list-style-type: none;
