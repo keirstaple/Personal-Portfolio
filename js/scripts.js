@@ -9,4 +9,9 @@ $(document).ready(function(){
         }, 1000);
     }
   });
+  //Toggle the menu icon when in mobile view
+  $('.fa-bars').on('click', function() {
+    console.log('clicked');
+    $('.nav-links').toggle(500);
+  });
 });
