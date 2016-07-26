@@ -149,7 +149,11 @@ nav{
     float: left;
     margin: 10px;
     cursor: pointer;
-    
+    &:hover{
+      border: 5px solid #C14A3C;
+      color: #C14A3C;
+      font-size: 30px;
+    }
   }
 
   #pARTicipate{
@@ -162,6 +166,9 @@ nav{
     background: url('../img/Lousy_Lifehacks_screenshots/Search.png');
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  #pARTicipate-page, #lousyLifehacks-page {
+    display: none;
   }
 
   // .pulse {

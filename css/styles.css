@@ -113,6 +113,10 @@ nav {
     float: left;
     margin: 10px;
     cursor: pointer; }
+    .main .project:hover {
+      border: 5px solid #C14A3C;
+      color: #C14A3C;
+      font-size: 30px; }
   .main #pARTicipate {
     background: url("../img/pARTicipate_screenshots/pARTicipate-home.png");
     background-position: center;
@@ -122,5 +126,7 @@ nav {
     background: url("../img/Lousy_Lifehacks_screenshots/Search.png");
     background-size: cover;
     background-repeat: no-repeat; }
+  .main #pARTicipate-page, .main #lousyLifehacks-page {
+    display: none; }
 
 /*# sourceMappingURL=styles.css.map */
