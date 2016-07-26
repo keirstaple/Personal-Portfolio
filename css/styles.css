@@ -76,7 +76,8 @@ nav {
           display: none; } }
       @media screen and (min-width: 800px) {
         nav .nav-bar ul, nav .nav-bar .nav-links {
-          flex: 2; } }
+          flex: 2;
+          display: block; } }
       nav .nav-bar ul li, nav .nav-bar .nav-links li {
         text-align: center;
         margin: 0 0 15px 0;
@@ -108,8 +109,8 @@ nav {
     border-bottom-width: 5px;
     border-bottom-color: #C14A3C; }
   .main .project {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     float: left;
     margin: 10px;
     cursor: pointer; }
@@ -126,9 +127,13 @@ nav {
     background: url("../img/Lousy_Lifehacks_screenshots/Search.png");
     background-size: cover;
     background-repeat: no-repeat; }
-  .main #pARTicipate-page, .main #lousyLifehacks-page {
-    display: none;
-    height: 100vh;
-    width: 100vw; }
+
+#pARTicipate-page, #lousyLifehacks-page {
+  display: none;
+  color: white;
+  background-color: black; }
+  @media screen and (min-width: 800px) {
+    #pARTicipate-page, #lousyLifehacks-page {
+      width: 100vw; } }
 
 /*# sourceMappingURL=styles.css.map */

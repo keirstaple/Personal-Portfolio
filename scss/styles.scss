@@ -100,6 +100,7 @@ nav{
       }
       @media screen and (min-width: $break-medium) {
         flex: 2;
+        display: block;
       }
       li{
         text-align: center;
@@ -144,8 +145,8 @@ nav{
   }
 
   .project {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     float: left;
     margin: 10px;
     cursor: pointer;
@@ -155,7 +156,6 @@ nav{
       font-size: 30px;
     }
   }
-
   #pARTicipate{
     background: url('../img/pARTicipate_screenshots/pARTicipate-home.png');
     background-position: center;
@@ -167,12 +167,18 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
   }
-  #pARTicipate-page, #lousyLifehacks-page {
-    display: none;
-    height: 100vh;
+}
+
+#pARTicipate-page, #lousyLifehacks-page {
+  display: none;
+  color: white;
+  background-color: black;
+  @media screen and (min-width: $break-medium){
     width: 100vw;
   }
-
+  // position: fixed;
+  // width: 100%;
+}
   // .pulse {
   // 	animation-name: pulse_animation;
   // 	animation-duration: 5000ms;
@@ -180,7 +186,7 @@ nav{
   // 	animation-iteration-count: infinite;
   // 	animation-timing-function: linear;
   // }
-}
+
 
 
 // @keyframes pulse_animation {

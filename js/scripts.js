@@ -18,17 +18,41 @@ $(document).ready(function(){
 
 
   $('div.project[href^="#"]').on('click', function(event){
+    event.preventDefault();
     var projectTarget = $($(this).attr('href'));
-      event.preventDefault();
-      // Set the effect type
-      var effect = 'slide';
-      // Set the options for the effect type chosen
-      var options = { direction: 'right' };
-      // Set the duration (default: 400 milliseconds)
-      var duration = 500;
-      $('html, body').animate({
-        slideToggle: projectTarget.toggle(effect, options, duration)
-      });
+    var main = $('.main');
 
+    // Set the effect type
+    var effect = 'slide';
+    // Set the options for the effect type chosen
+    var options = { direction: 'right' };
+    var options2 = { direction: 'left' };
+    // Set the duration (default: 400 milliseconds)
+    var duration = 500;
+    $('.main').animate({
+      mainToggle: main.toggle(effect, options2, duration)
+    });
+    $('html, body').animate({
+      slideToggle: projectTarget.toggle(effect, options, duration)
+    });
+
+  });
+
+  $('.back').on('click', function(event) {
+    var main = $('.main');
+
+    // Set the effect type
+    var effect = 'slide';
+    // Set the options for the effect type chosen
+    var options = { direction: 'right' };
+    var options2 = { direction: 'left' };
+    // Set the duration (default: 400 milliseconds)
+    var duration = 500;
+    $('.main').animate({
+      mainToggle: main.toggle(effect, options2, duration)
+    });
+    $('html, body').animate({
+      slideToggle: projectTarget.toggle(effect, options, duration)
+    });
   });
 });
