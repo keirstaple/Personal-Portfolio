@@ -118,7 +118,7 @@ nav{
     ul.nav-links.is-open{
       display: block;
     }
-    
+
     .fa-bars {
       float: right;
       color: white;
@@ -128,7 +128,7 @@ nav{
     }
   }
 }
-//end sidebar
+//end nav-bar
 
 // main content section (non-navbar)
 .main {
@@ -144,17 +144,29 @@ nav{
   }
   .section{
     height: 100vh;
-    background-color: #FEFEF2;
+    background-color: white;
     border-bottom: solid;
     border-bottom-width: 5px;
     border-bottom-color: #C14A3C;
   }
 
+  #projects-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $break-medium) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
   .project {
     height: 300px;
-    width: 300px;
+    width: 400px;
     float: left;
     margin: 10px;
+    // margin-left: 100px;
     cursor: pointer;
     &:hover{
       border: 5px solid #C14A3C;
