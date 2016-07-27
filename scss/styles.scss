@@ -1,7 +1,7 @@
 /* For testing only */
-*:not(body):not(html) {
-  border:1px dashed #000;
-}
+// *:not(body):not(html) {
+//   border:1px dashed #000;
+// }
 
 //
 *,
@@ -137,17 +137,20 @@ nav{
   flex-direction: column;
   .banner {
     height: 100vh;
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h1, h3 {
       font-family: Moderne Sans;
+      margin: 0;
     }
   }
   .section{
     height: 100vh;
     background-color: white;
     border-bottom: solid;
-    border-bottom-width: 5px;
-    border-bottom-color: #C14A3C;
+    border-bottom-width: 1px;
+    border-bottom-color: #E6E4E4;
   }
 
   #projects-section{

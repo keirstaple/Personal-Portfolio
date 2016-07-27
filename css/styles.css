@@ -1,7 +1,4 @@
 /* For testing only */
-*:not(body):not(html) {
-  border: 1px dashed #000; }
-
 *,
 *::before,
 *::after {
@@ -99,15 +96,18 @@ nav {
   flex-direction: column; }
   .main .banner {
     height: 100vh;
-    padding: 50px; }
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
     .main .banner h1, .main .banner h3 {
-      font-family: Moderne Sans; }
+      font-family: Moderne Sans;
+      margin: 0; }
   .main .section {
     height: 100vh;
     background-color: white;
     border-bottom: solid;
-    border-bottom-width: 5px;
-    border-bottom-color: #C14A3C; }
+    border-bottom-width: 1px;
+    border-bottom-color: #E6E4E4; }
   .main #projects-section {
     display: flex;
     flex-direction: column;

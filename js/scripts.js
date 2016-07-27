@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  event.preventDefault();
   //This snippet will watch for a click on an a tag and smoothly scroll down to its anchor
   $('a[href^="#"]').on('click', function(event) {
     var target = $($(this).attr('href'));
@@ -18,5 +19,10 @@ $(document).ready(function(){
     } else {
         $('.mobile-nav-toggle, .nav-links').addClass('is-open');
       }
+  });
+
+  $(document).on('scroll', function(){
+    // $('.eyesNears').addClass('animated pulse');
+    $('#Stick').removeClass('animated pulse');
   });
 });
