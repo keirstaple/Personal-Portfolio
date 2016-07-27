@@ -50,15 +50,17 @@ body{
 //navbar
 nav{
   flex: 0 0 10vw;
+  // .nav-bar.is-open{
+  //   display: block;
+  // }
   .nav-bar {
     background-color: #292929;
     border: solid 1px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    width: 100vw;
     @media screen and (min-width: $break-medium){
+      position: fixed;
       top: 0;
       bottom: 0;
       left: 0;
@@ -89,15 +91,14 @@ nav{
 
     }
 
-    ul, .nav-links {
+
+    ul.nav-links {
       list-style-type: none;
       text-decoration: none;
       padding: 0;
       left: 10%;
       top: 50%;
-      @media screen and (max-width: $break-medium) {
-        display: none;
-      }
+      display: none;
       @media screen and (min-width: $break-medium) {
         flex: 2;
         display: block;
@@ -113,6 +114,11 @@ nav{
         font-family: 'Karla', sans-serif;
       }
     }
+    //When user clicks the toggle icon, it sets class to .is-open
+    ul.nav-links.is-open{
+      display: block;
+    }
+    
     .fa-bars {
       float: right;
       color: white;
@@ -169,19 +175,19 @@ nav{
   }
 }
 
-#pARTicipate-page, #lousyLifehacks-page {
-  display: none;
-  color: white;
-  background-color: black;
-  height: 100vh;
-  margin-top: 200vh;
-  // position: fixed;
-  @media screen and (min-width: $break-medium){
-    width: 100vw;
-  }
-  // position: fixed;
-  // width: 100%;
-}
+// #pARTicipate-page, #lousyLifehacks-page {
+//   display: none;
+//   color: white;
+//   background-color: black;
+//   height: 100vh;
+//   margin-top: 200vh;
+//   // position: fixed;
+//   @media screen and (min-width: $break-medium){
+//     width: 100vw;
+//   }
+//   // position: fixed;
+//   // width: 100%;
+// }
   // .pulse {
   // 	animation-name: pulse_animation;
   // 	animation-duration: 5000ms;

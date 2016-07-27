@@ -36,11 +36,10 @@ nav {
     border: solid 1px;
     padding: 20px;
     display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100vw; }
+    flex-direction: column; }
     @media screen and (min-width: 800px) {
       nav .nav-bar {
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
@@ -66,27 +65,27 @@ nav {
           nav .nav-bar .picture-menu-icon img {
             height: 75px;
             width: auto; } }
-    nav .nav-bar ul, nav .nav-bar .nav-links {
+    nav .nav-bar ul.nav-links {
       list-style-type: none;
       text-decoration: none;
       padding: 0;
       left: 10%;
-      top: 50%; }
-      @media screen and (max-width: 800px) {
-        nav .nav-bar ul, nav .nav-bar .nav-links {
-          display: none; } }
+      top: 50%;
+      display: none; }
       @media screen and (min-width: 800px) {
-        nav .nav-bar ul, nav .nav-bar .nav-links {
+        nav .nav-bar ul.nav-links {
           flex: 2;
           display: block; } }
-      nav .nav-bar ul li, nav .nav-bar .nav-links li {
+      nav .nav-bar ul.nav-links li {
         text-align: center;
         margin: 0 0 15px 0;
         color: #B2841B; }
-      nav .nav-bar ul a, nav .nav-bar .nav-links a {
+      nav .nav-bar ul.nav-links a {
         text-decoration: none;
         color: #FFFFFF;
         font-family: 'Karla', sans-serif; }
+    nav .nav-bar ul.nav-links.is-open {
+      display: block; }
     nav .nav-bar .fa-bars {
       float: right;
       color: white; }
@@ -128,15 +127,5 @@ nav {
     background: url("../img/Lousy_Lifehacks_screenshots/Search.png");
     background-size: cover;
     background-repeat: no-repeat; }
-
-#pARTicipate-page, #lousyLifehacks-page {
-  display: none;
-  color: white;
-  background-color: black;
-  height: 100vh;
-  margin-top: 200vh; }
-  @media screen and (min-width: 800px) {
-    #pARTicipate-page, #lousyLifehacks-page {
-      width: 100vw; } }
 
 /*# sourceMappingURL=styles.css.map */
