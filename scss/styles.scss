@@ -1,7 +1,7 @@
 /* For testing only */
-// *:not(body):not(html) {
-//   border:1px dashed #000;
-// }
+*:not(body):not(html) {
+  border:1px dashed #000;
+}
 
 //
 *,
@@ -27,6 +27,7 @@
 
 //variables
 $break-small: 320px;
+$break-smallish: 360px;
 $break-medium: 800px;
 $break-large: 1200px;
 //
@@ -35,10 +36,18 @@ $break-large: 1200px;
 body{
   padding: 0;
   margin: 0;
+  width: 115vw;
+  @media screen and (min-width: $break-smallish){
+    width: 100vw;
+  }
 }
 .container {
   display: flex;
   font: 12px;
+  width: 115vw;
+  @media screen and (min-width: $break-smallish){
+    width: 100vw;
+  }
   @media screen and (min-width: $break-small) {
     flex-direction: column
   }
@@ -50,15 +59,17 @@ body{
 //navbar
 nav{
   flex: 0 0 10vw;
-  // .nav-bar.is-open{
-  //   display: block;
-  // }
+
   .nav-bar {
     background-color: #292929;
     border: solid 1px;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    width: 115vw;
+    @media screen and (min-width: $break-smallish){
+      width: 100vw;
+    }
     @media screen and (min-width: $break-medium){
       position: fixed;
       top: 0;
@@ -140,9 +151,16 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     h1, h3 {
       font-family: Moderne Sans;
       margin: 0;
+    }
+    svg {
+      height: 60vh;
+      @media screen and (min-height: $break-medium) {
+        height: 90vh;
+      }
     }
   }
   .section{

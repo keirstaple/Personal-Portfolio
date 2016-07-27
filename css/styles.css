@@ -1,4 +1,7 @@
 /* For testing only */
+*:not(body):not(html) {
+  border: 1px dashed #000; }
+
 *,
 *::before,
 *::after {
@@ -14,11 +17,19 @@
   src: url("../fonts/Moderne_Sans.ttf"); }
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  width: 115vw; }
+  @media screen and (min-width: 360px) {
+    body {
+      width: 100vw; } }
 
 .container {
   display: flex;
-  font: 12px; }
+  font: 12px;
+  width: 115vw; }
+  @media screen and (min-width: 360px) {
+    .container {
+      width: 100vw; } }
   @media screen and (min-width: 320px) {
     .container {
       flex-direction: column; } }
@@ -33,7 +44,11 @@ nav {
     border: solid 1px;
     padding: 20px;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 115vw; }
+    @media screen and (min-width: 360px) {
+      nav .nav-bar {
+        width: 100vw; } }
     @media screen and (min-width: 800px) {
       nav .nav-bar {
         position: fixed;
@@ -98,10 +113,16 @@ nav {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     .main .banner h1, .main .banner h3 {
       font-family: Moderne Sans;
       margin: 0; }
+    .main .banner svg {
+      height: 60vh; }
+      @media screen and (min-height: 800px) {
+        .main .banner svg {
+          height: 90vh; } }
   .main .section {
     height: 100vh;
     background-color: white;
