@@ -23,6 +23,6 @@ $(document).ready(function(){
 
   $(document).on('scroll', function(){
     // $('.eyesNears').addClass('animated pulse');
-    $('#Stick').removeClass('animated pulse');
+    $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
   });
 });

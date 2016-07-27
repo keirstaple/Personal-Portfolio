@@ -145,12 +145,15 @@ nav{
   flex: 1 1;
   display: flex;
   flex-direction: column;
-  .banner {
-    height: 100vh;
+  .banner#landing-banner {
+    height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media screen and (min-height: $break-medium){
+      height: 100vh;
+    }
     h1, h3 {
       font-family: Moderne Sans;
       margin: 0;
@@ -158,7 +161,7 @@ nav{
     svg {
       height: 60vh;
       @media screen and (min-height: $break-medium) {
-        height: 90vh;
+        height: 95vh;
       }
     }
   }
