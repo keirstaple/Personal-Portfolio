@@ -16,43 +16,101 @@ $(document).ready(function(){
     $('.nav-links').toggle();
   });
 
-
-  $('div.project[href^="#"]').on('click', function(event){
+  //
+  $('div.project#pARTicipate').on('click', function(event){
     event.preventDefault();
-    var projectTarget = $($(this).attr('href'));
+    var projectTarget = $('#pARTicipate-page');
     var main = $('.main');
 
-    // Set the effect type
+    //Set the effect type
     var effect = 'slide';
-    // Set the options for the effect type chosen
+
+    //Set the options for the effect type chosen
     var options = { direction: 'right' };
     var options2 = { direction: 'left' };
-    // Set the duration (default: 400 milliseconds)
-    var duration = 500;
-    $('.main').animate({
-      mainToggle: main.toggle(effect, options2, duration)
-    });
-    $('html, body').animate({
-      slideToggle: projectTarget.toggle(effect, options, duration)
-    });
 
+    //Set the duration (default: 400milliseconds)
+    var duration1 = 100;
+    var duration2 = 100;
+    $('html, body').animate({
+      projectToggle: projectTarget.toggle(effect, options, duration1)
+    });
+    $('.main').animate({
+      mainToggle: main.toggle()
+    });
   });
 
-  $('.back').on('click', function(event) {
+  //
+  $('#back-pARTicipate').on('click', function(event){
+    event.preventDefault();
+    var projectTarget = $('#pARTicipate-page');
     var main = $('.main');
 
-    // Set the effect type
+    //Set the effect type
     var effect = 'slide';
-    // Set the options for the effect type chosen
+
+    //Set the options for the effect type chosen
     var options = { direction: 'right' };
     var options2 = { direction: 'left' };
-    // Set the duration (default: 400 milliseconds)
-    var duration = 500;
+
+    //Set the duration (default: 400milliseconds)
+    var duration1 = 1;
+
     $('.main').animate({
-      mainToggle: main.toggle(effect, options2, duration)
+      mainToggle: main.toggle(effect, options2, duration1)
     });
     $('html, body').animate({
-      slideToggle: projectTarget.toggle(effect, options, duration)
+      projectToggle: projectTarget.toggle(effect, options, duration1)
     });
   });
+
+  // $('div.project[href^="#"]').on('click', function(event){
+  //   event.preventDefault();
+  //   var projectTarget = $($(this).attr('href'));
+  //   var main = $('.main');
+  //
+  //   // Set the effect type
+  //   var effect = 'slide';
+  //   // Set the options for the effect type chosen
+  //   var options = { direction: 'right' };
+  //   var options2 = { direction: 'left' };
+  //   // Set the duration (default: 400 milliseconds)
+  //   var duration = 500;
+  //   $('.main').animate({
+  //     mainToggle: main.toggle(effect, options2, duration)
+  //   });
+  //   $('html, body').animate({
+  //     slideToggle: projectTarget.toggle(effect, options, duration)
+  //   });
+  //   console.log('click1')
+  //   $('.back').on('click', function(event){
+  //     event.preventDefault();
+  //     console.log('click2')
+  //     $('.main').animate({
+  //       mainToggle: main.toggle(effect, options2, duration)
+  //     });
+  //     $('html, body').animate({
+  //       slideToggle: projectTarget.toggle(effect, options, duration)
+  //     });
+  //   });
+  // });
+
+  // $('.back[href^="#"]').on('click', function(event) {
+  //   var sectionTarget = $($(this).attr('href'));
+  //   var main = $('.main');
+  //
+  //   // Set the effect type
+  //   var effect = 'slide';
+  //   // Set the options for the effect type chosen
+  //   var options = { direction: 'right' };
+  //   var options2 = { direction: 'left' };
+  //   // Set the duration (default: 400 milliseconds)
+  //   var duration = 500;
+  //   $('html, body').animate({
+  //     slideToggle: projectTarget.toggle(effect, options, duration)
+  //   });
+  //   $('.main').animate({
+  //     mainToggle: main.toggle(effect, options2, duration)
+  //   });
+  // });
 });

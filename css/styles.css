@@ -36,10 +36,11 @@ nav {
     border: solid 1px;
     padding: 20px;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    position: fixed;
+    width: 100vw; }
     @media screen and (min-width: 800px) {
       nav .nav-bar {
-        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
@@ -131,7 +132,9 @@ nav {
 #pARTicipate-page, #lousyLifehacks-page {
   display: none;
   color: white;
-  background-color: black; }
+  background-color: black;
+  height: 100vh;
+  margin-top: 200vh; }
   @media screen and (min-width: 800px) {
     #pARTicipate-page, #lousyLifehacks-page {
       width: 100vw; } }

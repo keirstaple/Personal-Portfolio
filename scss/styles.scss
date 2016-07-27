@@ -56,9 +56,9 @@ nav{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    // height: 10vh;
+    position: fixed;
+    width: 100vw;
     @media screen and (min-width: $break-medium){
-      position: fixed;
       top: 0;
       bottom: 0;
       left: 0;
@@ -173,6 +173,9 @@ nav{
   display: none;
   color: white;
   background-color: black;
+  height: 100vh;
+  margin-top: 200vh;
+  // position: fixed;
   @media screen and (min-width: $break-medium){
     width: 100vw;
   }
