@@ -1,4 +1,7 @@
 /* For testing only */
+*:not(body):not(html) {
+  border: 1px dashed #000; }
+
 *,
 *::before,
 *::after {
@@ -146,7 +149,6 @@ nav {
     color: #292929; }
 
 .project-tile {
-  height: 200px;
   width: 100vw;
   float: left;
   cursor: pointer; }
@@ -160,12 +162,24 @@ nav {
 
 #lousyLifehacks-tile {
   background: url("../img/Lousy_Lifehacks_screenshots/Synopsis.png");
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-position: 40% 50%;
   height: 150px; }
   @media screen and (min-width: 400px) {
     #lousyLifehacks-tile {
       height: 200px; } }
+
+#Genius-tile {
+  background: url("../img/Genius-redesign/Logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 65% 50%;
+  height: 50px; }
+  @media screen and (min-width: 400px) {
+    #Genius-tile {
+      background-size: 150% 100%;
+      height: 100px; } }
 
 .project-detail {
   display: flex;
@@ -181,6 +195,12 @@ nav {
     color: #292929; }
   .project-detail a {
     color: #FEFAF2; }
+
+#pARTicipate-detail,
+#lousyLifehacks-detail,
+#Genius-detail {
+  padding-left: 8vw;
+  padding-right: 8vw; }
 
 .project-detail > h3, h4, h5, ul, li {
   margin-top: 10px;
