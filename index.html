@@ -41,8 +41,8 @@
                 <path d="M32.242746,75.5810042 C35.1672891,52.0135362 56.7978818,32.9083286 80.5474748,32.9083286 L180.851259,32.9083286 C204.604681,32.9083286 226.883038,51.9119141 230.613993,75.3705733 L256.246641,236.537755 C259.976418,259.989006 243.745288,279 220.007052,279 L49.9929478,279 C26.2485984,279 9.37086244,259.894374 12.2953536,236.327324 L32.242746,75.5810042 Z" id="Head-Shape" fill="#282828"></path>
                 <ellipse id="Ear-Right" fill="#282828" transform="translate(45.000000, 46.000000) rotate(-325.000000) translate(-45.000000, -46.000000) " cx="45" cy="46" rx="30" ry="34"></ellipse>
                 <ellipse id="Ear-Left" fill="#282828" transform="translate(215.000000, 46.000000) scale(-1, 1) rotate(-325.000000) translate(-215.000000, -46.000000) " cx="215" cy="46" rx="30" ry="34"></ellipse>
-                <ellipse id="Eyeball-Right" fill="#FFFFFF" cx="87" cy="108.5" rx="26" ry="21.5"></ellipse>
-                <ellipse id="Eyeball-Left" fill="#FFFFFF" cx="177" cy="108.5" rx="26" ry="21.5"></ellipse>
+                <ellipse id="Eyeball-Right" fill="#FFFFFF" cx="87" cy="108.5" rx="26" ry="21.5" class="eye-ball"></ellipse>
+                <ellipse id="Eyeball-Left" fill="#FFFFFF" cx="177" cy="108.5" rx="26" ry="21.5" class="eye-ball"></ellipse>
                 <ellipse id="Iris-Right" fill="#694321" cx="87.5" cy="108.5" rx="12.5" ry="16.5"></ellipse>
                 <ellipse id="Iris-Left" fill="#694321" cx="177.5" cy="108.5" rx="12.5" ry="16.5"></ellipse>
                 <ellipse id="Pupil-Right" fill="#000000" cx="87.5" cy="108" rx="7.5" ry="11"></ellipse>
@@ -90,17 +90,51 @@
         <div id="projects-section" class="section">
           <h1>PROJECTS</h1>
           <div class="project">
-            <div id="pARTicipate-tile" href="pARTicipate/index.html" class="project-tile"></div>
-            <div class="project-detail">
+            <div id="pARTicipate-tile" class="project-tile"></div>
+            <div id="pARTicipate-detail" class="project-detail">
               <h3 class="role">Role</h3>
-              <h5 class="role">Front End Developer</h5>
+              <h4 class="role">Front End Developer</h4>
               <h3 class="responsibilities">Responsibilities</h3>
-              <h5 class="responsibilities"> </h5>
+              <ul class="responsibilities">
+                <li>Built structure/architecture for the project using EmberJS</li>
+                <li>Deeply collaborated with UX and UI designers to implement their designs</li>
+                <li>Connected site to Firebase database and successfully saved and stored user data</li>
+                <li>Implemented Google Maps API that retrieves location stored in database — currently there is a bug that prevents the map from showing.</li>
+              </ul>
               <h3 class="synopsis">Synopsis</h3>
-              <h5 class="synopsis">pARTicipate won Epicodus' Design Week — Best Overall Project. The goal of the project was to get people outside in their communities, so we created a project that does just that. pARTicipate allows users to host public art installations in their community where they define the number of participants they want involved. Users can join the projects they want to help and donate funds to the cause. If we kept expanding on the idea, we would allow users to take walking tours of their city's most popular public art pieces. Although this project was design-based, we took it one step further and built a mock-up using EmberJS that allows people to get a feel for what the mobile site might look and feel like.</h5>
+              <h4 class="synopsis">pARTicipate won Epicodus' Design Week — Best Overall Project. The goal of the project was to get people outside in their communities, so we created a project that does just that. pARTicipate allows users to host public art installations in their community where they define the number of participants they want involved. Users can join the projects they want to help and donate funds to the cause. If we kept expanding on the idea, we would allow users to take walking tours of their city's most popular public art pieces. Although this project was design-based, we took it one step further and built a mock-up using EmberJS that allows people to get a feel for what the mobile site might look and feel like.</h4>
             </div>
           </div>
-          <div id="lousyLifehacks-tile" href="Lousy-Lifehacks/" class="project-tile">
+          <div id="lousyLifehacks-tile" class="project-tile"></div>
+          <div id="lousyLifehacks-detail" class="project-detail">
+            <h3 class="role">Role</h3>
+            <h4 class="role">Front End Developer</h4>
+            <h3 class="responsibilities">Responsibilities</h3>
+            <ul class="responsibilities">
+              <li>Built site that allows users to enter a keyword and generate a list of how-to and life hack videos with a low view-count using EmberJS framework and Youtube’s API</li>
+              <li>Worked closely with UX and UI designer to build their designs</li>
+              <li>Allowed users to authenticate the site through Google/Twitter</li>
+              <li>Created a favorites service that alllows user to bookmark videos they want to see again</li>
+            </ul>
+            <h3 class="synopsis">Synopsis</h3>
+            <h4 class="synopsis">Lousy Lifehacks was inspired by <a href="http://youhole.tv/">Youhole.tv</a>, which randomly generates low view-count Youtube videos. Using EmberJS and the Youtube API, our team built this project that allows users to search a keyword or keyphrase and the site returns low view-count "How-To" videos. This site is for the amusement of those who want to watch lousy lifehackers impart their wisdom.</h4>
+            <div id="Genius-tile" class="project-tile"></div>
+            <div id="Genius-detail" class="project-detail">
+              <h3 class="role">Role</h3>
+              <h4 class="role">Designer</h4>
+              <h3 class="responsibilities">Responsibilities</h3>
+              <ul class="responsibilities">
+                <li>Redesigned many of Genius’ pages to enhance user experience and provide features to bring more users to the page</li>
+                <li>Developed user personas that drove design ideas</li>
+                <li>Implemented atomic design principles</li>
+                <li>Redesigned logo to better reflect their audience</li>
+                <li>Drew high fidelity wireframes using Sketch</li>
+                <li>Built prototypes using InVision</li>
+                <li>Thoroughly documented all design ideas and developed a case study — coming to my site soon!</li>
+              </ul>
+              <h3 class="synopsis">Synopsis</h3>
+              <h4 class="synopsis">I was inspired to redesign one of my favorite sites, <span href="http://genius.com/">Genius</span>, which allows users to dive deep into the lyrics of their favorite artists.</h4>
+            </div>
           </div>
         </div>
         <div id="contact-section" class="section"></div>

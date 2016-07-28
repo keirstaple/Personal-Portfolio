@@ -21,11 +21,13 @@ $(document).ready(function(){
       }
   });
 
-  // $(document).on('scroll', function(){
-  //   // $('.eyesNears').addClass('animated pulse');
-  //   $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
-  // });
+  //When you scroll down the page, the popsicle stick svg stops bouncing
+  $(document).on('scroll', function(){
+    $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
+    $('#Nose').addClass('animated pulse');
+  });
 
+  //
   $('.about-icon').on('mouseover', function(){
     var status = $(this).hasClass('animated pulse')
     if(status){

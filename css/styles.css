@@ -13,14 +13,13 @@
   font-family: Moderne Sans;
   src: url("../fonts/Moderne_Sans.ttf"); }
 body {
-  padding: 0;
   margin: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%; }
 
 .container {
   font: 12px;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   margin: 0;
   padding: 0; }
@@ -30,38 +29,21 @@ nav {
 
 .nav-bar {
   background-color: #292929;
-  border: solid 1px;
-  padding: 20px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 8vw;
+  padding-right: 8vw;
   display: flex;
   flex-direction: column; }
-  @media screen and (min-width: 800px) {
-    .nav-bar {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 10vw;
-      min-width: 115px;
-      height: 100vh; } }
 
 .picture-menu-icon {
   display: flex;
-  justify-content: space-between; }
-  @media screen and (min-width: 320px) {
-    .picture-menu-icon {
-      flex-direction: row;
-      align-items: center; } }
-  @media screen and (min-width: 800px) {
-    .picture-menu-icon {
-      flex-direction: column;
-      flex: 1; } }
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center; }
   .picture-menu-icon img {
-    height: 125px;
+    height: 75px;
     width: auto; }
-    @media screen and (min-width: 320px) {
-      .picture-menu-icon img {
-        height: 75px;
-        width: auto; } }
 
 .nav-links {
   list-style-type: none;
@@ -71,10 +53,6 @@ nav {
   top: 50%;
   display: none;
   font-size: 1.5em; }
-  @media screen and (min-width: 800px) {
-    .nav-links {
-      flex: 2;
-      display: block; } }
   .nav-links li {
     text-align: center;
     margin: 0 0 15px 0;
@@ -82,7 +60,7 @@ nav {
   .nav-links a {
     text-decoration: none;
     color: #FEFAF2;
-    font-family: 'Karla', sans-serif; }
+    font-family: "Karla", sans-serif; }
 
 .nav-links.is-open {
   display: block; }
@@ -90,12 +68,8 @@ nav {
 .fa-bars {
   float: right;
   color: #FEFAF2; }
-  @media screen and (min-width: 800px) {
-    .fa-bars {
-      display: none; } }
 
 .main {
-  flex: 1;
   display: flex;
   flex-direction: column; }
 
@@ -107,18 +81,19 @@ nav {
   align-items: center;
   justify-content: flex-start;
   color: #FEFAF2; }
-  #landing-banner h1, #landing-banner h3 {
-    font-family: Moderne Sans;
-    margin: 0;
-    margin-top: 20px; }
+  #landing-banner h1 {
+    font-family: "Moderne Sans";
+    margin-top: 20px;
+    margin-bottom: 0; }
+  #landing-banner h3 {
+    font-family: "Karla", sans-serif;
+    color: #E88B96;
+    margin: 0; }
   #landing-banner svg {
-    height: 60vh; }
-    @media screen and (min-height: 800px) {
-      #landing-banner svg {
-        height: 95vh; } }
+    height: 50vh; }
 
 .section {
-  margin-bottom: 100px; }
+  margin-bottom: 50px; }
 
 #about-section {
   display: flex;
@@ -126,12 +101,6 @@ nav {
   align-items: center;
   justify-content: flex-start;
   font-family: Moderne Sans; }
-  @media screen and (min-width: 800px) {
-    #about-section {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: center; } }
   #about-section .row {
     display: flex;
     flex-direction: row;
@@ -143,56 +112,81 @@ nav {
   #about-section .education,
   #about-section .tech-skills,
   #about-section .additional-skills {
-    text-align: center; }
+    text-align: center;
+    width: 100vw; }
+  #about-section .additional-skills {
+    display: flex;
+    flex-direction: column; }
   #about-section .skills-col-1,
   #about-section .skills-col-2 {
     float: left;
-    text-align: left;
+    text-align: center;
     margin-left: 50px;
-    margin-right: 50px; }
+    margin-right: 50px;
+    font-family: "Karla", sans-serif; }
     #about-section .skills-col-1 h4,
     #about-section .skills-col-2 h4 {
       margin: 0.5em; }
+  #about-section h1 {
+    font-size: 1.5em; }
   #about-section img.about-icon {
-    height: 2.5em;
+    height: 2em;
     width: auto;
     margin: 5px; }
-    @media screen and (min-width: 800px) {
-      #about-section img.about-icon {
-        height: 3.5em; } }
 
 #projects-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Moderne Sans";
-  background-color: #FFDEBA; }
-  @media screen and (min-width: 800px) {
-    #projects-section {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: center; } }
+  background-color: #99C2FF;
+  color: #FEFAF2; }
+  #projects-section h4, #projects-section h5 {
+    font-family: "Karla", sans-serif;
+    color: #292929; }
 
 .project-tile {
-  height: 300px;
-  width: 400px;
+  height: 200px;
+  width: 100vw;
   float: left;
-  margin: 10px;
   cursor: pointer; }
-  .project-tile:hover {
-    border: 5px solid #99C2FF;
-    font-size: 30px; }
 
 #pARTicipate-tile {
-  background: url("../img/pARTicipate_screenshots/pARTicipate-home.png");
+  background: url("../img/pARTicipate_screenshots/pARTicipate-full.png");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 200px; }
 
 #lousyLifehacks-tile {
-  background: url("../img/Lousy_Lifehacks_screenshots/Search.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background: url("../img/Lousy_Lifehacks_screenshots/Synopsis.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 150px; }
+  @media screen and (min-width: 400px) {
+    #lousyLifehacks-tile {
+      height: 200px; } }
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  margin-bottom: 50px; }
+  .project-detail ul {
+    list-style-type: square;
+    font-family: "Karla", sans-serif;
+    color: #292929; }
+  .project-detail a {
+    color: #FEFAF2; }
+
+.project-detail > h3, h4, h5, ul, li {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+#pARTicipate-detail > h3.role {
+  margin-top: 50px; }
 
 /*# sourceMappingURL=styles.css.map */
