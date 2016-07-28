@@ -1,0 +1,26 @@
+
+<svg width="260px" height="549px" viewBox="92 -180 260 549" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Bear-Popsickle" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(92.000000, -180.000000)">
+        <g id="Stick" transform="translate(103.000000, 240.000000)">
+            <rect id="Whole-stick" fill="#F0CF9A" x="0" y="0" width="55" height="309" rx="27.5"></rect>
+            <path d="M16.25,55.5 L16.25,112.5" id="Stick-crack1" stroke="#CE9665" stroke-width="0.5" stroke-linecap="square"></path>
+            <path d="M36.25,105.5 L36.25,162.5" id="Stick-crack2" stroke="#CE9665" stroke-width="0.5" stroke-linecap="square"></path>
+            <path d="M16.25,155.5 L16.25,212.5" id="Stick-crack3" stroke="#CE9665" stroke-width="0.5" stroke-linecap="square"></path>
+            <path d="M36.25,205.5 L36.25,262.5" id="Stick-crack4" stroke="#CE9665" stroke-width="0.5" stroke-linecap="square"></path>
+        </g>
+        <g id="Bear-Head">
+            <path d="M32.242746,75.5810042 C35.1672891,52.0135362 56.7978818,32.9083286 80.5474748,32.9083286 L180.851259,32.9083286 C204.604681,32.9083286 226.883038,51.9119141 230.613993,75.3705733 L256.246641,236.537755 C259.976418,259.989006 243.745288,279 220.007052,279 L49.9929478,279 C26.2485984,279 9.37086244,259.894374 12.2953536,236.327324 L32.242746,75.5810042 Z" id="Head-Shape" fill="#282828"></path>
+            <ellipse id="Ear-Right" fill="#282828" transform="translate(45.000000, 46.000000) rotate(-325.000000) translate(-45.000000, -46.000000) " cx="45" cy="46" rx="30" ry="34"></ellipse>
+            <ellipse id="Ear-Left" fill="#282828" transform="translate(215.000000, 46.000000) scale(-1, 1) rotate(-325.000000) translate(-215.000000, -46.000000) " cx="215" cy="46" rx="30" ry="34"></ellipse>
+            <ellipse id="Eyeball-Right" fill="#FFFFFF" cx="87" cy="108.5" rx="26" ry="21.5"></ellipse>
+            <ellipse id="Eyeball-Left" fill="#FFFFFF" cx="177" cy="108.5" rx="26" ry="21.5"></ellipse>
+            <ellipse id="Iris-Right" fill="#694321" cx="87.5" cy="108.5" rx="12.5" ry="16.5"></ellipse>
+            <ellipse id="Iris-Left" fill="#694321" cx="177.5" cy="108.5" rx="12.5" ry="16.5"></ellipse>
+            <ellipse id="Pupil-Right" fill="#000000" cx="87.5" cy="108" rx="7.5" ry="11"></ellipse>
+            <ellipse id="Pupil-Left" fill="#000000" cx="177.5" cy="108" rx="7.5" ry="11"></ellipse>
+            <path d="M133.472076,122 C159.441888,122 197.672982,216.727571 185.4117,246 C173.150418,275.272429 94.8465511,277.785913 81.5324511,246 C68.2183512,214.214087 107.502263,122 133.472076,122 Z" id="Muzzle" stroke="#979797" fill="#D8D8D8"></path>
+            <path d="M110,177 C121.5,167 144.5,167 156,177 C167.5,187 156,217 156,217 L110,217 C110,217 98.5,187 110,177 Z" id="Nose" fill="#000000"></path>
+            <path d="M134.5,259.420879 C153.553824,259.420879 169,250.851275 169,244.5 C169,238.148725 153.553824,249.270289 134.5,249.270289 C115.446176,249.270289 100,238.148725 100,244.5 C100,250.851275 115.446176,259.420879 134.5,259.420879 Z" id="Mouth" fill="#E88B96"></path>
+        </g>
+    </g>
+</svg>
