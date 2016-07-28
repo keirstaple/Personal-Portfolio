@@ -166,6 +166,10 @@ nav {
   #about-section .tech-skills,
   #about-section .additional-skills {
     text-align: center; }
+  @media screen and (min-width: 1200px) {
+    #about-section .education-row {
+      display: flex;
+      flex-direction: column; } }
   #about-section .education-tech-icons {
     display: flex;
     flex-direction: column;
@@ -203,6 +207,12 @@ nav {
     @media screen and (min-width: 750px) {
       #about-section img.about-icon {
         height: 3.5em; } }
+    @media screen and (min-width: 1200px) {
+      #about-section img.about-icon {
+        height: 4.5em; } }
+  @media screen and (min-width: 1200px) {
+    #about-section .education-row > img.about-icon:nth-child(n+2) {
+      width: 6em; } }
 
 #projects-section {
   display: flex;
