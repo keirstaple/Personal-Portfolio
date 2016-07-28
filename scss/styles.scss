@@ -221,19 +221,39 @@ nav{
   .tech-skills,
   .additional-skills {
     text-align: center;
-    width: 100vw;
+    // width: 100vw;
+  }
+  .education-tech-icons {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    @media screen and (min-width: $break-large) {
+      flex-direction: row;
+      // align-items: center;
+      // margin-bottom: 100px;
+    }
   }
   .additional-skills{
     display: flex;
     flex-direction: column;
   }
+  .skills {
+    @media screen and (min-width: $break-medium) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   .skills-col-1,
   .skills-col-2 {
-    float: left;
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
     font-family: $font-karla-sans;
+    @media screen and (min-width: $break-medium) {
+      flex-direction: row;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
     h4{
       margin: 0.5em;
     }

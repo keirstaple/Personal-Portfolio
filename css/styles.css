@@ -165,18 +165,32 @@ nav {
   #about-section .education,
   #about-section .tech-skills,
   #about-section .additional-skills {
-    text-align: center;
-    width: 100vw; }
+    text-align: center; }
+  #about-section .education-tech-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    @media screen and (min-width: 1200px) {
+      #about-section .education-tech-icons {
+        flex-direction: row; } }
   #about-section .additional-skills {
     display: flex;
     flex-direction: column; }
+  @media screen and (min-width: 750px) {
+    #about-section .skills {
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
   #about-section .skills-col-1,
   #about-section .skills-col-2 {
-    float: left;
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
     font-family: "Karla", sans-serif; }
+    @media screen and (min-width: 750px) {
+      #about-section .skills-col-1,
+      #about-section .skills-col-2 {
+        flex-direction: row;
+        margin-left: 30px;
+        margin-right: 30px; } }
     #about-section .skills-col-1 h4,
     #about-section .skills-col-2 h4 {
       margin: 0.5em; }
