@@ -57,6 +57,9 @@ body{
 //navbar
 nav{
   width: 100vw;
+  @media screen and (min-width: $break-medium){
+    width: 10vw;
+  }
 }
 .nav-bar {
   background-color: $charcoal;
@@ -66,32 +69,40 @@ nav{
   padding-right: 8vw;
   display: flex;
   flex-direction: column;
-  // @media screen and (min-width: $break-medium){
-  //   position: fixed;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   width: 10vw;
-  //   min-width: 115px;
-  //   height: 100vh;
-  // }
+  @media screen and (min-width: $break-medium){
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 10vw;
+    min-width: 115px;
+    height: 100vh;
+  }
 }
 .picture-menu-icon {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  // @media screen and (min-width: $break-medium){
-  //   flex-direction: column;
-  //   flex: 1;
-  // }
+  @media screen and (min-width: $break-medium){
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    width: 10vw;
+    // top: 0;
+    // left: 0;
+
+  }
   img{
     height: 75px;
     width: auto;
-    // @media screen and (min-width: $break-medium) {
-    //   height: 125px;
-    //   width: auto;
-    // }
+    @media screen and (min-width: $break-medium) {
+      height: 125px;
+      width: auto;
+    }
   }
 }
 
@@ -104,14 +115,19 @@ nav{
   top: 50%;
   display: none;
   font-size: 1.5em;
-  // @media screen and (min-width: $break-medium) {
-  //   flex: 2;
-  //   display: block;
-  // }
+  @media screen and (min-width: $break-medium) {
+    flex: 2;
+    display: block;
+    width: 10vw;
+  }
   li{
     text-align: center;
     margin: 0 0 15px 0;
     color: #B2841B;
+    margin-left: 0;
+    @media screen and (min-width: $break-medium){
+      // margin: 0;
+    }
   }
   a {
     text-decoration: none;
@@ -127,9 +143,9 @@ nav{
 .fa-bars {
   float: right;
   color: $text-color-light;
-  // @media screen and (min-width: $break-medium) {
-  //   display: none;
-  // }
+  @media screen and (min-width: $break-medium) {
+    display: none;
+  }
 }
 
 
@@ -140,6 +156,9 @@ nav{
   // flex: 1;
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: $break-medium){
+    width: 90vw;
+  }
 }
 #landing-banner {
   background-color: $bluish;
@@ -150,7 +169,7 @@ nav{
   justify-content: center;
   color: $text-color-light;
   @media screen and (min-width: $break-medium) {
-    height: 95vh;
+    height: 100vh;
   }
 
   h1{
@@ -165,13 +184,17 @@ nav{
   }
   svg {
     height: 50vh;
-    // @media screen and (min-width: $break-medium) {
-    //   height: 95vh;
-    // }
+    @media screen and (min-width: $break-medium) {
+      height: 95vh;
+    }
   }
 }
 .section{
   margin-bottom: 50px;
+  @media screen and (min-width: $break-medium){
+    width: 100vw;
+    margin-left: 2.5vw;
+  }
 }
 #about-section{
   display: flex;
@@ -179,12 +202,12 @@ nav{
   align-items: center;
   justify-content: flex-start;
   font-family: Moderne Sans;
-  // @media screen and (min-width: $break-medium){
-  //   flex-direction: row;
-  //   flex-wrap: wrap;
-  //   align-items: flex-start;
-  //   justify-content: center;
-  // }
+  @media screen and (min-width: $break-medium){
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
   .row{
     display: flex;
     flex-direction: row;
@@ -222,9 +245,9 @@ nav{
     height: 2em;
     width: auto;
     margin: 5px;
-    // @media screen and (min-width: $break-medium){
-    //   height: 3.5em;
-    // }
+    @media screen and (min-width: $break-medium){
+      height: 3.5em;
+    }
   }
 }
 #projects-section{
@@ -234,12 +257,12 @@ nav{
   font-family: $font-moderne-sans;
   background-color: $bluish;
   color: $text-color-light;
-  // @media screen and (min-width: $break-medium) {
-  //   flex-direction: row;
-  //   flex-wrap: wrap;
-  //   align-items: flex-start;
-  //   justify-content: center;
-  // }
+  @media screen and (min-width: $break-medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
   h4, h5{
     font-family: $font-karla-sans;
     color: $charcoal;
@@ -258,6 +281,9 @@ nav{
   // &:hover{
   //   border: 5px solid $bluish;
   // }
+  @media screen and (min-width: $break-medium) {
+    width: 90vw;
+  }
 }
 #pARTicipate-tile{
   background: url('../img/pARTicipate_screenshots/pARTicipate-full.png');
@@ -322,6 +348,9 @@ svg.github{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  @media screen and (min-width: $break-medium) {
+    width: 90vw;
+  }
   img {
     margin-left: 20px;
     margin-right: 20px;
