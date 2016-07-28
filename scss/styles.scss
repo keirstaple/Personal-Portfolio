@@ -229,6 +229,10 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100vw;
+    @media screen and (min-width: $break-medium) {
+      width: 90vw;
+    }
     @media screen and (min-width: $break-large) {
       flex-direction: row;
     }
@@ -331,10 +335,10 @@ nav{
 }
 #Genius-tile {
   background: url('../img/Genius-redesign/Logo.png');
-  background-size: cover;
+  background-size: 180% 90%;
   background-repeat: no-repeat;
   background-position: 65% 50%;
-  height: 50px;
+  height: 100px;
   @media screen and (min-width: $break-iPhone-plus) {
     background-size: 150% 100%;
     height: 100px;
@@ -409,4 +413,9 @@ svg.github{
   img{
     margin: 40px;
   }
+}
+
+footer {
+  text-align: center;
+  font-family: $font-karla-sans;
 }

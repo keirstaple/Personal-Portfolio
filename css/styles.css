@@ -173,7 +173,11 @@ nav {
   #about-section .education-tech-icons {
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    width: 100vw; }
+    @media screen and (min-width: 750px) {
+      #about-section .education-tech-icons {
+        width: 90vw; } }
     @media screen and (min-width: 1200px) {
       #about-section .education-tech-icons {
         flex-direction: row; } }
@@ -265,10 +269,10 @@ nav {
 
 #Genius-tile {
   background: url("../img/Genius-redesign/Logo.png");
-  background-size: cover;
+  background-size: 180% 90%;
   background-repeat: no-repeat;
   background-position: 65% 50%;
-  height: 50px; }
+  height: 100px; }
   @media screen and (min-width: 400px) {
     #Genius-tile {
       background-size: 150% 100%;
@@ -336,5 +340,9 @@ svg.github {
       height: 50vh; } }
   #contact-section img {
     margin: 40px; }
+
+footer {
+  text-align: center;
+  font-family: "Karla", sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */
