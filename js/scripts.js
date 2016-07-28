@@ -21,10 +21,10 @@ $(document).ready(function(){
       }
   });
 
-  $(document).on('scroll', function(){
-    // $('.eyesNears').addClass('animated pulse');
-    $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
-  });
+  // $(document).on('scroll', function(){
+  //   // $('.eyesNears').addClass('animated pulse');
+  //   $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
+  // });
 
   $('.about-icon').on('mouseover', function(){
     var status = $(this).hasClass('animated pulse')

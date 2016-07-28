@@ -1,4 +1,7 @@
 /* For testing only */
+*:not(body):not(html) {
+  border: 1px dashed #000; }
+
 *,
 *::before,
 *::after {
@@ -15,166 +18,173 @@
 body {
   padding: 0;
   margin: 0;
-  width: 115vw; }
-  @media screen and (min-width: 360px) {
-    body {
-      width: 100vw; } }
+  width: 100%;
+  height: 100%; }
 
 .container {
-  display: flex;
   font: 12px;
-  width: 115vw; }
-  @media screen and (min-width: 360px) {
-    .container {
-      width: 100vw; } }
-  @media screen and (min-width: 320px) {
-    .container {
-      flex-direction: column; } }
-  @media screen and (min-width: 800px) {
-    .container {
-      flex-direction: row; } }
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
 
 nav {
-  flex: 0 0 10vw; }
-  nav .nav-bar {
-    background-color: #292929;
-    border: solid 1px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 115vw; }
-    @media screen and (min-width: 360px) {
-      nav .nav-bar {
-        width: 100vw; } }
-    @media screen and (min-width: 800px) {
-      nav .nav-bar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 10vw;
-        min-width: 115px;
-        height: 100vh; } }
-    nav .nav-bar .picture-menu-icon {
-      display: flex;
-      justify-content: space-between;
-      height: 50px; }
-      @media screen and (min-width: 320px) {
-        nav .nav-bar .picture-menu-icon {
-          flex-direction: row;
-          align-items: center; } }
-      @media screen and (min-width: 800px) {
-        nav .nav-bar .picture-menu-icon {
-          flex-direction: column;
-          flex: 1; } }
-      nav .nav-bar .picture-menu-icon img {
-        height: 125px;
-        width: auto; }
-        @media screen and (min-width: 320px) {
-          nav .nav-bar .picture-menu-icon img {
-            height: 75px;
-            width: auto; } }
-    nav .nav-bar ul.nav-links {
-      list-style-type: none;
-      text-decoration: none;
-      padding: 0;
-      left: 10%;
-      top: 50%;
-      display: none; }
-      @media screen and (min-width: 800px) {
-        nav .nav-bar ul.nav-links {
-          flex: 2;
-          display: block; } }
-      nav .nav-bar ul.nav-links li {
-        text-align: center;
-        margin: 0 0 15px 0;
-        color: #B2841B; }
-      nav .nav-bar ul.nav-links a {
-        text-decoration: none;
-        color: #FFFFFF;
-        font-family: 'Karla', sans-serif; }
-    nav .nav-bar ul.nav-links.is-open {
-      display: block; }
-    nav .nav-bar .fa-bars {
-      float: right;
-      color: white; }
-      @media screen and (min-width: 800px) {
-        nav .nav-bar .fa-bars {
-          display: none; } }
+  width: 100vw; }
 
-.main {
-  flex: 1 1;
+.nav-bar {
+  background-color: #292929;
+  border: solid 1px;
+  padding: 20px;
   display: flex;
   flex-direction: column; }
-  .main .banner#landing-banner {
-    height: 85vh;
+  @media screen and (min-width: 800px) {
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 10vw;
+      min-width: 115px;
+      height: 100vh; } }
+
+.picture-menu-icon {
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (min-width: 320px) {
+    .picture-menu-icon {
+      flex-direction: row;
+      align-items: center; } }
+  @media screen and (min-width: 800px) {
+    .picture-menu-icon {
+      flex-direction: column;
+      flex: 1; } }
+  .picture-menu-icon img {
+    height: 125px;
+    width: auto; }
+    @media screen and (min-width: 320px) {
+      .picture-menu-icon img {
+        height: 75px;
+        width: auto; } }
+
+.nav-links {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  left: 10%;
+  top: 50%;
+  display: none; }
+  @media screen and (min-width: 800px) {
+    .nav-links {
+      flex: 2;
+      display: block; } }
+  .nav-links li {
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #B2841B; }
+  .nav-links a {
+    text-decoration: none;
+    color: #FEFAF2;
+    font-family: 'Karla', sans-serif; }
+
+.nav-links.is-open {
+  display: block; }
+
+.fa-bars {
+  float: right;
+  color: white; }
+  @media screen and (min-width: 800px) {
+    .fa-bars {
+      display: none; } }
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column; }
+  .main #landing-banner {
+    background-color: #99C2FF;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
-    @media screen and (min-height: 800px) {
-      .main .banner#landing-banner {
-        height: 100vh; } }
-    .main .banner#landing-banner h1, .main .banner#landing-banner h3 {
+    justify-content: center;
+    color: #FEFAF2; }
+    .main #landing-banner h1, .main #landing-banner h3 {
       font-family: Moderne Sans;
       margin: 0; }
-    .main .banner#landing-banner svg {
+    .main #landing-banner svg {
       height: 60vh; }
       @media screen and (min-height: 800px) {
-        .main .banner#landing-banner svg {
+        .main #landing-banner svg {
           height: 95vh; } }
   .main .section {
-    height: 100vh;
-    background-color: white;
-    border-bottom: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #E6E4E4; }
+    margin-bottom: 100px; }
   .main #about-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    font-family: Moderne Sans; }
+    @media screen and (min-width: 800px) {
+      .main #about-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center; } }
     .main #about-section .row {
       display: flex;
       flex-direction: row;
-      justify-content: center; }
+      justify-content: center;
+      margin-left: 75px;
+      margin-right: 75px;
+      margin-top: 25px;
+      margin-bottom: 25px; }
     .main #about-section .education,
     .main #about-section .tech-skills,
     .main #about-section .additional-skills {
       text-align: center; }
+    .main #about-section .skills-col-1,
+    .main #about-section .skills-col-2 {
+      float: left;
+      text-align: left;
+      margin-left: 50px;
+      margin-right: 50px; }
+      .main #about-section .skills-col-1 h4,
+      .main #about-section .skills-col-2 h4 {
+        margin: 0.5em; }
     .main #about-section img.about-icon {
       height: 2.5em;
       width: auto;
       margin: 5px; }
       @media screen and (min-width: 800px) {
         .main #about-section img.about-icon {
-          height: 5em; } }
+          height: 3.5em; } }
   .main #projects-section {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    font-family: "Moderne Sans";
+    background-color: #FFDEBA; }
     @media screen and (min-width: 800px) {
       .main #projects-section {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: center; } }
-  .main .project {
+  .main .project-tile {
     height: 300px;
     width: 400px;
     float: left;
     margin: 10px;
     cursor: pointer; }
-    .main .project:hover {
-      border: 5px solid #C14A3C;
-      color: #C14A3C;
+    .main .project-tile:hover {
+      border: 5px solid #99C2FF;
       font-size: 30px; }
-  .main #pARTicipate {
+  .main #pARTicipate-tile {
     background: url("../img/pARTicipate_screenshots/pARTicipate-home.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
-  .main #lousyLifehacks {
+  .main #lousyLifehacks-tile {
     background: url("../img/Lousy_Lifehacks_screenshots/Search.png");
     background-size: cover;
     background-repeat: no-repeat; }

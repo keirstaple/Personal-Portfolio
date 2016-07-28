@@ -1,7 +1,7 @@
 /* For testing only */
-// *:not(body):not(html) {
-//   border:1px dashed #000;
-// }
+*:not(body):not(html) {
+  border:1px dashed #000;
+}
 
 //
 *,
@@ -27,133 +27,124 @@
 
 //variables
 $break-small: 320px;
-$break-smallish: 360px;
 $break-medium: 800px;
 $break-large: 1200px;
+
+$font-family: "Moderne Sans";
+
+$text-color-light: #FEFAF2;
+$orangish: #FFDEBA;
+$bluish: #99C2FF;
 //
 
 
 body{
   padding: 0;
   margin: 0;
-  width: 115vw;
-  @media screen and (min-width: $break-smallish){
-    width: 100vw;
-  }
+  width: 100%;
+  height: 100%;
 }
 .container {
-  display: flex;
   font: 12px;
-  width: 115vw;
-  @media screen and (min-width: $break-smallish){
-    width: 100vw;
-  }
-  @media screen and (min-width: $break-small) {
-    flex-direction: column
-  }
-  @media screen and (min-width: $break-medium) {
-    flex-direction: row;
-  }
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 //navbar
 nav{
-  flex: 0 0 10vw;
-  .nav-bar {
-    background-color: #292929;
-    border: solid 1px;
-    padding: 20px;
-    display: flex;
+  width: 100vw;
+}
+.nav-bar {
+  background-color: #292929;
+  border: solid 1px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $break-medium){
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10vw;
+    min-width: 115px;
+    height: 100vh;
+  }
+}
+.picture-menu-icon {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-width: $break-small) {
+    flex-direction: row;
+    align-items: center;
+  }
+  @media screen and (min-width: $break-medium){
     flex-direction: column;
-    width: 115vw;
-    @media screen and (min-width: $break-smallish){
-      width: 100vw;
-    }
-    @media screen and (min-width: $break-medium){
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 10vw;
-      min-width: 115px;
-      height: 100vh;
-    }
-    .picture-menu-icon {
-      display: flex;
-      justify-content: space-between;
-      height: 50px;
-      @media screen and (min-width: $break-small) {
-        flex-direction: row;
-        align-items: center;
-      }
-      @media screen and (min-width: $break-medium){
-        flex-direction: column;
-        flex: 1;
-      }
-      img{
-        height: 125px;
-        width: auto;
-        @media screen and (min-width: $break-small) {
-          height: 75px;
-          width: auto;
-        }
-      }
-
-    }
-
-
-    ul.nav-links {
-      list-style-type: none;
-      text-decoration: none;
-      padding: 0;
-      left: 10%;
-      top: 50%;
-      display: none;
-      @media screen and (min-width: $break-medium) {
-        flex: 2;
-        display: block;
-      }
-      li{
-        text-align: center;
-        margin: 0 0 15px 0;
-        color: #B2841B;
-      }
-      a {
-        text-decoration: none;
-        color: #FFFFFF;
-        font-family: 'Karla', sans-serif;
-      }
-    }
-    //When user clicks the toggle icon, it sets class to .is-open
-    ul.nav-links.is-open{
-      display: block;
-    }
-
-    .fa-bars {
-      float: right;
-      color: white;
-      @media screen and (min-width: $break-medium) {
-        display: none;
-      }
+    flex: 1;
+  }
+  img{
+    height: 125px;
+    width: auto;
+    @media screen and (min-width: $break-small) {
+      height: 75px;
+      width: auto;
     }
   }
 }
+
+
+.nav-links {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  left: 10%;
+  top: 50%;
+  display: none;
+  @media screen and (min-width: $break-medium) {
+    flex: 2;
+    display: block;
+  }
+  li{
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #B2841B;
+  }
+  a {
+    text-decoration: none;
+    color: $text-color-light;
+    font-family: 'Karla', sans-serif;
+  }
+}
+    //When user clicks the toggle icon, it sets class to .is-open
+.nav-links.is-open{
+  display: block;
+}
+
+.fa-bars {
+  float: right;
+  color: white;
+  @media screen and (min-width: $break-medium) {
+    display: none;
+  }
+}
+
+
 //end nav-bar
 
 // main content section (non-navbar)
 .main {
-  flex: 1 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  .banner#landing-banner {
-    height: 85vh;
+  #landing-banner {
+    background-color: $bluish;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media screen and (min-height: $break-medium){
-      height: 100vh;
-    }
+    color: $text-color-light;
     h1, h3 {
       font-family: Moderne Sans;
       margin: 0;
@@ -166,33 +157,52 @@ nav{
     }
   }
   .section{
-    height: 100vh;
-    background-color: white;
-    border-bottom: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #E6E4E4;
+    // margin-top: 20px;
+    // background-color: #E3F2FD;
+    margin-bottom: 100px;
   }
   #about-section{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    font-family: Moderne Sans;
+    @media screen and (min-width: $break-medium){
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+    }
     .row{
       display: flex;
       flex-direction: row;
       justify-content: center;
+      margin-left: 75px;
+      margin-right: 75px;
+      margin-top: 25px;
+      margin-bottom: 25px;
     }
     .education,
     .tech-skills,
     .additional-skills {
       text-align: center;
     }
+    .skills-col-1,
+    .skills-col-2 {
+      float: left;
+      text-align: left;
+      margin-left: 50px;
+      margin-right: 50px;
+      h4{
+        margin: 0.5em;
+      }
+    }
     img.about-icon{
       height: 2.5em;
       width: auto;
       margin: 5px;
       @media screen and (min-width: $break-medium){
-        height: 5em;
+        height: 3.5em;
       }
     }
   }
@@ -200,6 +210,8 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: $font-family;
+    background-color: $orangish;
     @media screen and (min-width: $break-medium) {
       flex-direction: row;
       flex-wrap: wrap;
@@ -207,62 +219,26 @@ nav{
       justify-content: center;
     }
   }
-  .project {
+  .project-tile {
     height: 300px;
     width: 400px;
     float: left;
     margin: 10px;
-    // margin-left: 100px;
     cursor: pointer;
     &:hover{
-      border: 5px solid #C14A3C;
-      color: #C14A3C;
+      border: 5px solid $bluish;
       font-size: 30px;
     }
   }
-  #pARTicipate{
+  #pARTicipate-tile{
     background: url('../img/pARTicipate_screenshots/pARTicipate-home.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  #lousyLifehacks{
+  #lousyLifehacks-tile{
     background: url('../img/Lousy_Lifehacks_screenshots/Search.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
-
-// #pARTicipate-page, #lousyLifehacks-page {
-//   display: none;
-//   color: white;
-//   background-color: black;
-//   height: 100vh;
-//   margin-top: 200vh;
-//   // position: fixed;
-//   @media screen and (min-width: $break-medium){
-//     width: 100vw;
-//   }
-//   // position: fixed;
-//   // width: 100%;
-// }
-  // .pulse {
-  // 	animation-name: pulse_animation;
-  // 	animation-duration: 5000ms;
-  // 	transform-origin:70% 70%;
-  // 	animation-iteration-count: infinite;
-  // 	animation-timing-function: linear;
-  // }
-
-
-
-// @keyframes pulse_animation {
-// 	0% { transform: scale(1); }
-// 	30% { transform: scale(1); }
-// 	40% { transform: scale(1.08); }
-// 	50% { transform: scale(1); }
-// 	60% { transform: scale(1); }
-// 	70% { transform: scale(1.05); }
-// 	80% { transform: scale(1); }
-// 	100% { transform: scale(1); }
-// }
