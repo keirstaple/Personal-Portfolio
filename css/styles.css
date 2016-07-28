@@ -139,8 +139,8 @@ nav {
   margin-bottom: 50px; }
   @media screen and (min-width: 750px) {
     .section {
-      width: 100vw;
-      margin-left: 2.5vw; } }
+      width: 90vw;
+      margin-left: 10vw; } }
 
 #about-section {
   display: flex;
@@ -233,8 +233,7 @@ nav {
 
 .project-tile {
   width: 100vw;
-  float: left;
-  cursor: pointer; }
+  float: left; }
   @media screen and (min-width: 750px) {
     .project-tile {
       width: 90vw; } }
@@ -247,7 +246,7 @@ nav {
   height: 200px; }
   @media screen and (min-width: 750px) {
     #pARTicipate-tile {
-      height: 400px;
+      height: 500px;
       background-size: 120% 130%; } }
 
 #lousyLifehacks-tile {
@@ -261,7 +260,8 @@ nav {
       height: 200px; } }
   @media screen and (min-width: 750px) {
     #lousyLifehacks-tile {
-      background: url("../img/Lousy_Lifehacks_screenshots/Search.png"); } }
+      background: url("../img/Lousy_Lifehacks_screenshots/Search.png");
+      height: 440px; } }
 
 #Genius-tile {
   background: url("../img/Genius-redesign/Logo.png");
@@ -273,6 +273,10 @@ nav {
     #Genius-tile {
       background-size: 150% 100%;
       height: 100px; } }
+  @media screen and (min-width: 750px) {
+    #Genius-tile {
+      background-size: 100% 100%;
+      height: 200px; } }
 
 .project-detail {
   display: flex;
@@ -282,6 +286,10 @@ nav {
   padding-left: 8vw;
   padding-right: 8vw;
   margin-bottom: 50px; }
+  @media screen and (min-width: 750px) {
+    .project-detail {
+      line-height: 200%;
+      font-size: 125%; } }
   .project-detail ul {
     list-style-type: square;
     font-family: "Karla", sans-serif;
@@ -318,5 +326,14 @@ svg.github {
 
 .project-detail > h3.role {
   margin-top: 50px; }
+
+#contact-section {
+  font-family: "Karla", sans-serif;
+  text-align: center; }
+  @media screen and (min-width: 750px) {
+    #contact-section {
+      height: 50vh; } }
+  #contact-section img {
+    margin: 40px; }
 
 /*# sourceMappingURL=styles.css.map */

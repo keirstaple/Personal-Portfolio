@@ -92,9 +92,6 @@ nav{
     flex: 1;
     position: relative;
     width: 10vw;
-    // top: 0;
-    // left: 0;
-
   }
   img{
     height: 75px;
@@ -126,7 +123,6 @@ nav{
     color: #B2841B;
     margin-left: 0;
     @media screen and (min-width: $break-medium){
-      // margin: 0;
     }
   }
   a {
@@ -135,7 +131,8 @@ nav{
     font-family: $font-karla-sans;
   }
 }
-    //When user clicks the toggle icon, it sets class to .is-open
+
+//When user clicks the toggle icon, it sets class to .is-open
 .nav-links.is-open{
   display: block;
 }
@@ -171,7 +168,6 @@ nav{
   @media screen and (min-width: $break-medium) {
     height: 100vh;
   }
-
   h1{
     font-family: $font-moderne-sans;
     margin-top: 20px;
@@ -189,11 +185,12 @@ nav{
     }
   }
 }
+
 .section{
   margin-bottom: 50px;
   @media screen and (min-width: $break-medium){
-    width: 100vw;
-    margin-left: 2.5vw;
+    width: 90vw;
+    margin-left: 10vw;
   }
 }
 #about-section{
@@ -221,15 +218,11 @@ nav{
   .tech-skills,
   .additional-skills {
     text-align: center;
-    // width: 100vw;
   }
   .education-row {
     @media screen and (min-width: $break-large) {
       display: flex;
       flex-direction: column;
-      img{
-
-      }
     }
   }
   .education-tech-icons {
@@ -284,6 +277,7 @@ nav{
     }
   }
 }
+
 #projects-section{
   display: flex;
   flex-direction: column;
@@ -300,21 +294,12 @@ nav{
   h4, h5{
     font-family: $font-karla-sans;
     color: $charcoal;
-    // text-align: center;
   }
 }
-// .lousyLifehacks-detail > h3, h4, h5, ul, li {
-//   margin-top: 10px;
-//   margin-bottom: 10px;
-// }
+
 .project-tile {
-  // height: 200px;
   width: 100vw;
   float: left;
-  cursor: pointer;
-  // &:hover{
-  //   border: 5px solid $bluish;
-  // }
   @media screen and (min-width: $break-medium) {
     width: 90vw;
   }
@@ -326,7 +311,7 @@ nav{
   background-repeat: no-repeat;
   height: 200px;
   @media screen and (min-width: $break-medium) {
-    height: 400px;
+    height: 500px;
     background-size: 120% 130%;
   }
 }
@@ -341,6 +326,7 @@ nav{
   }
   @media screen and (min-width: $break-medium) {
     background: url('../img/Lousy_Lifehacks_screenshots/Search.png');
+    height: 440px;
   }
 }
 #Genius-tile {
@@ -353,6 +339,10 @@ nav{
     background-size: 150% 100%;
     height: 100px;
   }
+  @media screen and (min-width: $break-medium) {
+    background-size: 100% 100%;
+    height: 200px;
+  }
 }
 
 .project-detail{
@@ -363,6 +353,10 @@ nav{
   padding-left: 8vw;
   padding-right: 8vw;
   margin-bottom: 50px;
+  @media screen and (min-width: $break-medium) {
+    line-height: 200%;
+    font-size: 125%;
+  }
   ul{
     list-style-type: square;
     font-family: $font-karla-sans;
@@ -402,4 +396,16 @@ svg.github{
 }
 .project-detail > h3.role {
   margin-top: 50px;
+}
+
+#contact-section {
+  font-family: $font-karla-sans;
+  text-align: center;
+  @media screen and (min-width: $break-medium) {
+    height: 50vh;
+  }
+
+  img{
+    margin: 40px;
+  }
 }
