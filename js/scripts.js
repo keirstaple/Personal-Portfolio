@@ -25,4 +25,13 @@ $(document).ready(function(){
     // $('.eyesNears').addClass('animated pulse');
     $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
   });
+
+  $('.about-icon').on('mouseover', function(){
+    var status = $(this).hasClass('animated pulse')
+    if(status){
+      $(this).removeClass('animated pulse');
+    } else {
+      $(this).addClass('animated pulse');
+    }
+  });
 });

@@ -1,7 +1,4 @@
 /* For testing only */
-*:not(body):not(html) {
-  border: 1px dashed #000; }
-
 *,
 *::before,
 *::after {
@@ -132,6 +129,26 @@ nav {
     border-bottom: solid;
     border-bottom-width: 1px;
     border-bottom-color: #E6E4E4; }
+  .main #about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; }
+    .main #about-section .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+    .main #about-section .education,
+    .main #about-section .tech-skills,
+    .main #about-section .additional-skills {
+      text-align: center; }
+    .main #about-section img.about-icon {
+      height: 2.5em;
+      width: auto;
+      margin: 5px; }
+      @media screen and (min-width: 800px) {
+        .main #about-section img.about-icon {
+          height: 5em; } }
   .main #projects-section {
     display: flex;
     flex-direction: column;
