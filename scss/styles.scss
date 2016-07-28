@@ -1,7 +1,7 @@
 /* For testing only */
-*:not(body):not(html) {
-  border:1px dashed #000;
-}
+// *:not(body):not(html) {
+//   border:1px dashed #000;
+// }
 
 //
 *,
@@ -28,7 +28,7 @@
 //variables
 $break-small: 320px;
 $break-iPhone-plus: 400px;
-$break-medium: 800px;
+$break-medium: 750px;
 $break-large: 1200px;
 
 $font-moderne-sans: "Moderne Sans";
@@ -143,12 +143,16 @@ nav{
 }
 #landing-banner {
   background-color: $bluish;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   color: $text-color-light;
+  @media screen and (min-width: $break-medium) {
+    height: 95vh;
+  }
+
   h1{
     font-family: $font-moderne-sans;
     margin-top: 20px;
@@ -312,6 +316,6 @@ nav{
   margin-top: 10px;
   margin-bottom: 10px;
 }
-#pARTicipate-detail > h3.role {
+.project-detail > h3.role {
   margin-top: 50px;
 }
