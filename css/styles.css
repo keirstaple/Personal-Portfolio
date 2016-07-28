@@ -159,6 +159,10 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px; }
+  @media screen and (min-width: 750px) {
+    #pARTicipate-tile {
+      height: 400px;
+      background-size: 120% 130%; } }
 
 #lousyLifehacks-tile {
   background: url("../img/Lousy_Lifehacks_screenshots/Synopsis.png");
@@ -169,6 +173,9 @@ nav {
   @media screen and (min-width: 400px) {
     #lousyLifehacks-tile {
       height: 200px; } }
+  @media screen and (min-width: 750px) {
+    #lousyLifehacks-tile {
+      background: url("../img/Lousy_Lifehacks_screenshots/Search.png"); } }
 
 #Genius-tile {
   background: url("../img/Genius-redesign/Logo.png");
@@ -195,6 +202,17 @@ nav {
     color: #292929; }
   .project-detail a {
     color: #FEFAF2; }
+
+svg.github {
+  transform: scale(0.1); }
+
+.link-icons {
+  width: 100vw;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
 
 #pARTicipate-detail,
 #lousyLifehacks-detail,

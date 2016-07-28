@@ -265,6 +265,10 @@ nav{
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
+  @media screen and (min-width: $break-medium) {
+    height: 400px;
+    background-size: 120% 130%;
+  }
 }
 #lousyLifehacks-tile{
   background: url('../img/Lousy_Lifehacks_screenshots/Synopsis.png');
@@ -274,6 +278,9 @@ nav{
   height: 150px;
   @media screen and (min-width: $break-iPhone-plus) {
     height: 200px;
+  }
+  @media screen and (min-width: $break-medium) {
+    background: url('../img/Lousy_Lifehacks_screenshots/Search.png');
   }
 }
 #Genius-tile {
@@ -305,7 +312,17 @@ nav{
     color: $text-color-light;
   }
 }
-
+svg.github{
+  transform: scale(0.10);
+}
+.link-icons {
+  width: 100vw;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 #pARTicipate-detail,
 #lousyLifehacks-detail,
 #Genius-detail {
