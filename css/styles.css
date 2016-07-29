@@ -302,9 +302,6 @@ nav {
   .project-detail a {
     color: #FEFAF2; }
 
-svg.github {
-  transform: scale(0.1); }
-
 .link-icons {
   width: 100vw;
   margin-bottom: 50px;
@@ -334,15 +331,28 @@ svg.github {
 
 #contact-section {
   font-family: "Karla", sans-serif;
-  text-align: center; }
+  text-align: center;
+  width: 100vw;
+  margin-bottom: 10px; }
   @media screen and (min-width: 750px) {
     #contact-section {
-      height: 50vh; } }
+      height: 50vh;
+      width: 90vw;
+      margin-left: 10vw; } }
   #contact-section img {
     margin: 40px; }
 
 footer {
-  text-align: center;
-  font-family: "Karla", sans-serif; }
+  width: 100vw;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  @media screen and (min-width: 750px) {
+    footer {
+      width: 90vw;
+      margin-left: 10vw;
+      margin-top: 70px; } }
 
 /*# sourceMappingURL=styles.css.map */

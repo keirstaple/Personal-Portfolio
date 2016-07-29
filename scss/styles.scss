@@ -371,9 +371,6 @@ nav{
     color: $text-color-light;
   }
 }
-svg.github{
-  transform: scale(0.10);
-}
 .link-icons {
   width: 100vw;
   margin-bottom: 50px;
@@ -406,16 +403,29 @@ svg.github{
 #contact-section {
   font-family: $font-karla-sans;
   text-align: center;
+  width: 100vw;
+  margin-bottom: 10px;
   @media screen and (min-width: $break-medium) {
     height: 50vh;
+    width: 90vw;
+    margin-left: 10vw;
   }
-
   img{
     margin: 40px;
   }
 }
 
 footer {
-  text-align: center;
+  width: 100vw;
+
   font-family: $font-karla-sans;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: $break-medium) {
+    width: 90vw;
+    margin-left: 10vw;
+    margin-top: 70px;
+  }
 }
