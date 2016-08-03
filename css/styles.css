@@ -268,19 +268,13 @@ nav {
       height: 440px; } }
 
 #Genius-tile {
-  background: url("../img/Genius-redesign/Logo.png");
-  background-size: 180% 90%;
+  background: url("../img/Genius-redesign/Genius-logo.svg");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: 65% 50%;
-  height: 100px; }
-  @media screen and (min-width: 400px) {
-    #Genius-tile {
-      background-size: 150% 100%;
-      height: 100px; } }
+  background-color: #FFE067;
+  height: 150px; }
   @media screen and (min-width: 750px) {
     #Genius-tile {
-      background: url("../img/Genius-redesign/Logo-big.png");
-      background-size: 100% 100%;
       height: 250px; } }
 
 .project-detail {
