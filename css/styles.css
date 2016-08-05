@@ -250,7 +250,7 @@ nav {
   height: 200px; }
   @media screen and (min-width: 750px) {
     #pARTicipate-tile {
-      height: 500px;
+      height: 450px;
       background-size: 120% 130%; } }
 
 #lousyLifehacks-tile {
@@ -258,24 +258,26 @@ nav {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: 40% 50%;
-  height: 150px; }
+  height: 200px; }
   @media screen and (min-width: 400px) {
     #lousyLifehacks-tile {
-      height: 200px; } }
+      height: 250px; } }
   @media screen and (min-width: 750px) {
     #lousyLifehacks-tile {
-      background: url("../img/Lousy_Lifehacks_screenshots/Search.png");
-      height: 440px; } }
+      background: url("../img/Lousy_Lifehacks_screenshots/Synopsis-large.png");
+      background-size: 100% 100%;
+      height: 450px; } }
 
 #Genius-tile {
   background: url("../img/Genius-redesign/Genius-logo.svg");
-  background-size: 100% 100%;
+  background-size: 80% 80%;
   background-repeat: no-repeat;
+  background-position: center;
   background-color: #FFE067;
-  height: 150px; }
+  height: 200px; }
   @media screen and (min-width: 750px) {
     #Genius-tile {
-      height: 250px; } }
+      height: 450px; } }
 
 .project-detail {
   display: flex;
@@ -335,18 +337,5 @@ nav {
       margin-left: 10vw; } }
   #contact-section img {
     margin: 40px; }
-
-footer {
-  width: 100vw;
-  font-family: "Karla", sans-serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; }
-  @media screen and (min-width: 750px) {
-    footer {
-      width: 90vw;
-      margin-left: 10vw;
-      margin-top: 70px; } }
 
 /*# sourceMappingURL=styles.css.map */
