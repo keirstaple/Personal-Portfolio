@@ -28,12 +28,13 @@ $(document).ready(function(){
   });
 
   //
-  $('.about-icon').on('mouseover', function(){
-    var status = $(this).hasClass('animated pulse')
-    if(status){
-      $(this).removeClass('animated pulse');
-    } else {
-      $(this).addClass('animated pulse');
-    }
-  });
+  $('.about-icon')
+    .mouseover(function(){
+      var status = $(this).hasClass('animated pulse');
+      if(!status){ $(this).addClass('animated pulse'); }
+    })
+    .mouseout(function(){
+      var status = $(this).hasClass('animated pulse');
+      if(status){ $(this).removeClass('animated pulse'); }
+    });
 });

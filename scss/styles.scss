@@ -273,6 +273,9 @@ nav{
     }
     @media screen and (min-width: $break-large) {
       height: 4.5em;
+      // &:hover {
+      //   height: 5.5em;
+      // }
     }
   }
   .education-row > img.about-icon:nth-child(n+2) {
