@@ -35,6 +35,7 @@ $font-moderne-sans: "Moderne Sans";
 $font-karla-sans: 'Karla', sans-serif;
 
 $text-color-light: #FEFAF2;
+$reddish: #E88B96;
 $orangish: #FFDEBA;
 $bluish: #99C2FF;
 $charcoal: #292929;
@@ -175,7 +176,7 @@ nav{
   }
   h3{
     font-family: $font-karla-sans;
-    color: #E88B96;
+    color: $reddish;
     margin: 0;
   }
   svg {
@@ -380,7 +381,7 @@ nav{
   @media screen and (min-width: $break-medium) {
     width: 90vw;
   }
-  img {
+  svg {
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -409,7 +410,13 @@ nav{
     width: 90vw;
     margin-left: 10vw;
   }
-  img{
+  svg{
     margin: 40px;
+  }
+}
+
+.reddish {
+  g > g {
+    fill: $reddish;
   }
 }

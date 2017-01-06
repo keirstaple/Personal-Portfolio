@@ -27,7 +27,7 @@ $(document).ready(function(){
     $('#Nose').addClass('animated pulse');
   });
 
-  //
+  //When you scroll over an icon in the about section, it pulses
   $('.about-icon')
     .mouseover(function(){
       var status = $(this).hasClass('animated pulse');
@@ -37,4 +37,14 @@ $(document).ready(function(){
       var status = $(this).hasClass('animated pulse');
       if(status){ $(this).removeClass('animated pulse'); }
     });
+
+    $('.brand-icon')
+      .mouseover(function(){
+        var status = $(this).hasClass('animated pulse reddish');
+        if(!status){ $(this).addClass('animated pulse reddish'); }
+      })
+      .mouseout(function(){
+        var status = $(this).hasClass('animated pulse reddish');
+        if(status){ $(this).removeClass('animated pulse reddish'); }
+      });
 });
