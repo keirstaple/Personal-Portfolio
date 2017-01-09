@@ -1,0 +1,21 @@
+<svg width="127px" height="118px" viewBox="0 0 127 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="dropbox" transform="translate(64.000000, 58.500000) scale(1, -1) translate(-64.000000, -58.500000) translate(0.000000, -1.000000)" fill="#007EE5">
+          <g id="top-left-flap" transform="translate(0.145250, 72.473125)">
+              <polygon id="path2997" points="37.5 45 0.4625 20.8175 26.07125 0.31 63.415 23.36875"></polygon>
+          </g>
+          <g id="bottom-left-flap" transform="translate(0.607875, 27.274750)">
+              <polygon id="path3001" points="0 25 37.0375 0.8175 62.9525 22.45 25.60875 45.50875"></polygon>
+          </g>
+          <g id="bottom-right-flap" transform="translate(63.560750, 27.224750)">
+              <polygon id="path3005" points="0 22.5 25.91625 0.8675 62.9525 25.05 37.34375 45.55875"></polygon>
+          </g>
+          <g id="top-right-flap" transform="translate(62.763625, 72.041000)">
+              <polygon id="path3009" points="63.75 21.25 26.71375 45.4325 0.7975 23.80125 38.14125 0.7425"></polygon>
+          </g>
+          <g id="box-base" transform="translate(26.136500, 0.070750)">
+              <polygon id="path3013" points="37.5 45 11.50875 23.4325 0.3875 30.69375 0.3875 22.5525 37.5 0.29625 74.61375 22.5525 74.61375 30.69375 63.49375 23.4325"></polygon>
+          </g>
+      </g>
+  </g>
+</svg>

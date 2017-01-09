@@ -123,7 +123,7 @@ nav {
       height: 100vh; } }
   #landing-banner h1 {
     font-family: "Moderne Sans";
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 0; }
   #landing-banner h3 {
     font-family: "Karla", sans-serif;
@@ -133,10 +133,11 @@ nav {
     height: 50vh; }
     @media screen and (min-width: 750px) {
       #landing-banner svg {
-        height: 95vh; } }
+        height: 70vh; } }
 
 .section {
-  margin-bottom: 50px; }
+  padding-top: 100px;
+  padding-bottom: 100px; }
   @media screen and (min-width: 750px) {
     .section {
       width: 90vw;
@@ -234,6 +235,8 @@ nav {
   #projects-section h4, #projects-section h5 {
     font-family: "Karla", sans-serif;
     color: #292929; }
+  #projects-section #projects-header {
+    margin-bottom: 100px; }
 
 .project-tile {
   width: 100vw;
@@ -241,6 +244,16 @@ nav {
   @media screen and (min-width: 750px) {
     .project-tile {
       width: 90vw; } }
+
+#badgers-tile {
+  background: url("../img/badgers/badgers-name.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  height: 200px; }
+  @media screen and (min-width: 750px) {
+    #badgers-tile {
+      height: 450px; } }
 
 #pARTicipate-tile {
   background: url("../img/pARTicipate_screenshots/pARTicipate-full.png");
@@ -286,7 +299,7 @@ nav {
   justify-content: flex-start;
   padding-left: 8vw;
   padding-right: 8vw;
-  margin-bottom: 50px; }
+  margin-bottom: 100px; }
   @media screen and (min-width: 750px) {
     .project-detail {
       line-height: 200%;
@@ -311,6 +324,11 @@ nav {
   .link-icons svg {
     margin-left: 20px;
     margin-right: 20px; }
+
+.elypsis {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 100px; }
 
 #pARTicipate-detail,
 #lousyLifehacks-detail,
