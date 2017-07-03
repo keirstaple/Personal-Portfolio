@@ -315,14 +315,47 @@ nav{
     width: 90vw;
   }
 }
-#badgers-tile{
-  background: url('../img/badgers/badgers-name.png');
+#hd-tile {
+  background: url('../img/quote-center/HomeDepot.png');
   background-position: center;
-  background-size: 75% 75%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 150px;
+  @media screen and (min-width: $break-medium) {
+    background-size: 100%;
+    height: 350px;
+  }
+}
+#potato-tile {
+  background: url('../img/potato-potato/potato-background-white.jpg');
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
   @media screen and (min-width: $break-medium) {
     height: 450px;
+    background-size: 120% 130%;
+  }
+}
+#hack-tile {
+  background: url('http://civicpdx.org/assets/civic-logo-invert-animated.svg');
+  background-position: center;
+  background-size: 55% 60%;
+  background-repeat: no-repeat;
+  height: 150px;
+  @media screen and (min-width: $break-medium) {
+    height: 350px;
+  }
+}
+
+#badgers-tile{
+  background: url('../img/badgers/badgers-name.png');
+  background-position: center;
+  background-size: 55% 60%;
+  background-repeat: no-repeat;
+  height: 150px;
+  @media screen and (min-width: $break-medium) {
+    height: 350px;
   }
 }
 #pARTicipate-tile{
@@ -386,7 +419,7 @@ nav{
 }
 .link-icons {
   width: 100vw;
-  margin-bottom: 50px;
+  margin: 50px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -397,6 +430,8 @@ nav{
   svg {
     margin-left: 20px;
     margin-right: 20px;
+    height: 50px;
+    width: auto;
   }
 }
 .elypsis {
@@ -404,6 +439,20 @@ nav{
   text-align: center;
   margin-bottom: 100px;
 }
+
+.brand-icon {
+  height: 50px;
+  width: auto;
+}
+
+h2.view-more {
+  text-align: center;
+}
+
+#hd-detail,
+#potato-detail,
+#hack-detail,
+#badgers-detail,
 #pARTicipate-detail,
 #lousyLifehacks-detail,
 #Genius-detail {
@@ -430,6 +479,8 @@ nav{
   }
   svg{
     margin: 40px;
+    height: 50px;
+    width: auto;
   }
 }
 
