@@ -23,8 +23,12 @@ $(document).ready(function(){
 
   //When you scroll down the page, the popsicle stick svg stops bouncing
   $(document).on('scroll', function(){
+    var toggleStatus = $('.mobile-nav-toggle').hasClass('is-open');
     $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
     $('#Nose').addClass('animated pulse');
+    if(toggleStatus) {
+      $('.mobile-nav-toggle, .nav-links').removeClass('is-open');
+    }
   });
 
   //When you scroll over an icon in the about section, it pulses

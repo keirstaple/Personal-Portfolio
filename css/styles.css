@@ -6,12 +6,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-@font-face {
-  font-family: Porto;
-  src: url("../fonts/Porto_400.ttf"); }
-@font-face {
-  font-family: Moderne Sans;
-  src: url("../fonts/Moderne_Sans.ttf"); }
 body {
   margin: 0;
   width: 100vw;
@@ -30,17 +24,21 @@ nav {
 
 .nav-bar {
   background-color: #292929;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-right: 5vw;
+  padding: 1vh 1.5vw;
   display: flex;
   flex-direction: column; }
 
 .picture-menu-icon {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center; }
+
+#initials {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif; }
 
 .nav-links {
   list-style-type: none;
@@ -58,7 +56,7 @@ nav {
   .nav-links a {
     text-decoration: none;
     color: #FEFAF2;
-    font-family: "Karla", sans-serif; }
+    font-family: "Raleway", sans-serif; }
 
 .nav-links.is-open {
   display: flex;
@@ -72,10 +70,8 @@ nav {
 
 .main {
   display: flex;
-  flex-direction: column; }
-  @media screen and (min-width: 750px) {
-    .main {
-      width: 90vw; } }
+  flex-direction: column;
+  width: 100vw; }
 
 #landing-banner {
   background-color: #99C2FF;
@@ -89,11 +85,11 @@ nav {
     #landing-banner {
       height: 100vh; } }
   #landing-banner h1 {
-    font-family: "Moderne Sans";
+    font-family: "Quicksand", sans-serif;
     margin-top: 0;
     margin-bottom: 0; }
   #landing-banner h3 {
-    font-family: "Karla", sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #E88B96;
     margin: 0; }
   #landing-banner svg {
@@ -104,10 +100,8 @@ nav {
 
 .section {
   padding-top: 100px;
-  padding-bottom: 100px; }
-  @media screen and (min-width: 750px) {
-    .section {
-      width: 100vw; } }
+  padding-bottom: 100px;
+  width: 100vw; }
 
 #about-section {
   display: flex;
@@ -159,7 +153,7 @@ nav {
   #about-section .skills-col-1,
   #about-section .skills-col-2 {
     text-align: center;
-    font-family: "Karla", sans-serif; }
+    font-family: "Raleway", sans-serif; }
     @media screen and (min-width: 750px) {
       #about-section .skills-col-1,
       #about-section .skills-col-2 {
@@ -186,128 +180,91 @@ nav {
       width: 6em; } }
 
 #projects-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Moderne Sans";
-  background-color: #99C2FF;
+  font-family: "Quicksand", sans-serif;
+  background-color: white;
   color: #FEFAF2; }
-  @media screen and (min-width: 750px) {
-    #projects-section {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: center; } }
-  #projects-section h4, #projects-section h5 {
-    font-family: "Karla", sans-serif;
+  #projects-section h3, #projects-section h4 {
+    font-family: "Raleway", sans-serif;
     color: #292929; }
   #projects-section #projects-header {
-    margin-bottom: 100px; }
+    margin: 25px;
+    text-align: center; }
+
+#project-tiles {
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 750px) {
+    #project-tiles {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+
+.project {
+  height: 50vh;
+  width: 45vw;
+  background-color: #F2F1EF; }
 
 .project-tile {
-  width: 100vw;
-  float: left; }
-  @media screen and (min-width: 750px) {
-    .project-tile {
-      width: 90vw; } }
+  float: left;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #F2F1EF;
+  height: 100px;
+  width: 100px; }
 
 #hd-tile {
   background: url("../img/quote-center/HomeDepot.png");
   background-position: center;
-  background-size: 100%;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 150px; }
-  @media screen and (min-width: 750px) {
-    #hd-tile {
-      background-size: 100%;
-      height: 350px; } }
+  background-color: #F2F1EF;
+  height: 100px;
+  width: 100px; }
 
 #potato-tile {
-  background: url("../img/potato-potato/potato-background-white.jpg");
+  background: url("../img/potato-potato/logo_wordmark_2.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 200px; }
-  @media screen and (min-width: 750px) {
-    #potato-tile {
-      height: 450px;
-      background-size: 120% 130%; } }
+  background-color: #F2F1EF;
+  height: 100px;
+  width: 100px; }
 
 #hack-tile {
   background: url("http://civicpdx.org/assets/civic-logo-invert-animated.svg");
   background-position: center;
-  background-size: 55% 60%;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 150px; }
-  @media screen and (min-width: 750px) {
-    #hack-tile {
-      height: 350px; } }
+  background-color: #F2F1EF;
+  height: 100px;
+  width: 100px; }
 
 #badgers-tile {
   background: url("../img/badgers/badgers-name.png");
   background-position: center;
-  background-size: 55% 60%;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 150px; }
-  @media screen and (min-width: 750px) {
-    #badgers-tile {
-      height: 350px; } }
+  background-color: #F2F1EF;
+  height: 100px;
+  width: 100px; }
 
 #pARTicipate-tile {
-  background: url("../img/pARTicipate_screenshots/pARTicipate-full.png");
+  background: url("../img/pARTicipate_screenshots/participate.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 200px; }
-  @media screen and (min-width: 750px) {
-    #pARTicipate-tile {
-      height: 450px;
-      background-size: 120% 130%; } }
-
-#lousyLifehacks-tile {
-  background: url("../img/Lousy_Lifehacks_screenshots/Synopsis.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: 40% 50%;
-  height: 200px; }
-  @media screen and (min-width: 400px) {
-    #lousyLifehacks-tile {
-      height: 250px; } }
-  @media screen and (min-width: 750px) {
-    #lousyLifehacks-tile {
-      background: url("../img/Lousy_Lifehacks_screenshots/Synopsis-large.png");
-      background-size: 100% 100%;
-      height: 450px; } }
+  background-color: #F2F1EF;
+  height: 100px;
+  width: 100px; }
 
 #Genius-tile {
   background: url("../img/Genius-redesign/Genius-logo.svg");
-  background-size: 80% 80%;
-  background-repeat: no-repeat;
   background-position: center;
-  background-color: #FFE067;
-  height: 200px; }
-  @media screen and (min-width: 750px) {
-    #Genius-tile {
-      height: 450px; } }
-
-.project-detail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 8vw;
-  padding-right: 8vw;
-  margin-bottom: 100px; }
-  @media screen and (min-width: 750px) {
-    .project-detail {
-      line-height: 200%;
-      font-size: 125%; } }
-  .project-detail ul {
-    list-style-type: square;
-    font-family: "Karla", sans-serif;
-    color: #292929; }
-  .project-detail a {
-    color: #FEFAF2; }
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #F2F1EF;
+  height: 100px;
+  width: 100px; }
 
 .link-icons {
   width: 100vw;
@@ -324,11 +281,6 @@ nav {
     margin-right: 20px;
     height: 50px;
     width: auto; }
-
-.elypsis {
-  font-size: 2.5em;
-  text-align: center;
-  margin-bottom: 100px; }
 
 .brand-icon {
   height: 50px;
@@ -355,7 +307,7 @@ h2.view-more {
   margin-top: 50px; }
 
 #contact-section {
-  font-family: "Karla", sans-serif;
+  font-family: "Raleway", sans-serif;
   text-align: center;
   width: 100vw;
   margin-bottom: 10px; }

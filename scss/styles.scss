@@ -14,15 +14,15 @@
 //
 
 //fonts
-@font-face {
-    font-family: Porto;
-    src: url('../fonts/Porto_400.ttf');
-}
-
-@font-face {
-    font-family: Moderne Sans;
-    src: url('../fonts/Moderne_Sans.ttf');
-}
+// @font-face {
+//     font-family: Porto;
+//     src: url('../fonts/Porto_400.ttf');
+// }
+//
+// @font-face {
+//     font-family: Moderne Sans;
+//     src: url('../fonts/Moderne_Sans.ttf');
+// }
 //end fonts
 
 //variables
@@ -31,16 +31,27 @@ $break-iPhone-plus: 400px;
 $break-medium: 750px;
 $break-large: 1200px;
 
-$font-moderne-sans: "Moderne Sans";
-$font-karla-sans: 'Karla', sans-serif;
+$font-quicksand: 'Quicksand', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
 
 $text-color-light: #FEFAF2;
+$light-grey: #F2F1EF;
 $reddish: #E88B96;
 $orangish: #FFDEBA;
 $bluish: #99C2FF;
 $charcoal: #292929;
 //
 
+//mixins
+@mixin tile-background {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: $light-grey;
+  height: 100px;
+  width: 100px;
+};
+//
 
 body{
   margin: 0;
@@ -62,19 +73,24 @@ nav{
 }
 .nav-bar {
   background-color: $charcoal;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-right: 5vw;
+  padding: 1vh 1.5vw;
   display: flex;
   flex-direction: column;
 }
 .picture-menu-icon {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
 }
 
+#initials {
+
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: $font-raleway;
+}
 
 .nav-links {
   list-style-type: none;
@@ -93,7 +109,7 @@ nav{
   a {
     text-decoration: none;
     color: $text-color-light;
-    font-family: $font-karla-sans;
+    font-family: $font-raleway;
   }
 }
 
@@ -117,9 +133,7 @@ nav{
 .main {
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: $break-medium){
-    width: 90vw;
-  }
+  width: 100vw;
 }
 #landing-banner {
   background-color: $bluish;
@@ -133,12 +147,12 @@ nav{
     height: 100vh;
   }
   h1{
-    font-family: $font-moderne-sans;
+    font-family: $font-quicksand;
     margin-top: 0;
     margin-bottom: 0;
   }
   h3{
-    font-family: $font-karla-sans;
+    font-family: $font-raleway;
     color: $reddish;
     margin: 0;
   }
@@ -153,9 +167,7 @@ nav{
 .section{
   padding-top: 100px;
   padding-bottom: 100px;
-  @media screen and (min-width: $break-medium){
-    width: 100vw;
-  }
+  width: 100vw;
 }
 #about-section{
   display: flex;
@@ -215,7 +227,7 @@ nav{
   .skills-col-1,
   .skills-col-2 {
     text-align: center;
-    font-family: $font-karla-sans;
+    font-family: $font-raleway;
     @media screen and (min-width: $break-medium) {
       flex-direction: row;
       margin-left: 30px;
@@ -249,137 +261,65 @@ nav{
   }
 }
 
+
+//////
 #projects-section{
+  font-family: $font-quicksand;
+  background-color: white;
+  color: $text-color-light;
+  h3, h4 {
+    font-family: $font-raleway;
+    color: $charcoal;
+  }
+  #projects-header {
+    margin: 25px;
+    text-align: center;
+  }
+}
+#project-tiles {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: $font-moderne-sans;
-  background-color: $bluish;
-  color: $text-color-light;
   @media screen and (min-width: $break-medium) {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  h4, h5{
-    font-family: $font-karla-sans;
-    color: $charcoal;
-  }
-  #projects-header{
-    margin-bottom: 100px;
   }
 }
-
+.project {
+  height: 50vh;
+  width: 45vw;
+  background-color: $light-grey;
+}
 .project-tile {
-  width: 100vw;
   float: left;
-  @media screen and (min-width: $break-medium) {
-    width: 90vw;
-  }
+  @include tile-background;
 }
 #hd-tile {
   background: url('../img/quote-center/HomeDepot.png');
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 150px;
-  @media screen and (min-width: $break-medium) {
-    background-size: 100%;
-    height: 350px;
-  }
+  @include tile-background;
 }
 #potato-tile {
-  background: url('../img/potato-potato/potato-background-white.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  @media screen and (min-width: $break-medium) {
-    height: 450px;
-    background-size: 120% 130%;
-  }
+  background: url('../img/potato-potato/logo_wordmark_2.png');
+  @include tile-background;
 }
 #hack-tile {
   background: url('http://civicpdx.org/assets/civic-logo-invert-animated.svg');
-  background-position: center;
-  background-size: 55% 60%;
-  background-repeat: no-repeat;
-  height: 150px;
-  @media screen and (min-width: $break-medium) {
-    height: 350px;
-  }
+  @include tile-background;
 }
 
 #badgers-tile{
   background: url('../img/badgers/badgers-name.png');
-  background-position: center;
-  background-size: 55% 60%;
-  background-repeat: no-repeat;
-  height: 150px;
-  @media screen and (min-width: $break-medium) {
-    height: 350px;
-  }
+  @include tile-background;
 }
 #pARTicipate-tile{
-  background: url('../img/pARTicipate_screenshots/pARTicipate-full.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  @media screen and (min-width: $break-medium) {
-    height: 450px;
-    background-size: 120% 130%;
-  }
-}
-#lousyLifehacks-tile{
-  background: url('../img/Lousy_Lifehacks_screenshots/Synopsis.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: 40% 50%;
-  height: 200px;
-  @media screen and (min-width: $break-iPhone-plus) {
-    height: 250px;
-  }
-  @media screen and (min-width: $break-medium) {
-    background: url('../img/Lousy_Lifehacks_screenshots/Synopsis-large.png');
-    background-size: 100% 100%;
-    height: 450px;
-  }
+  background: url('../img/pARTicipate_screenshots/participate.png');
+  @include tile-background;
 }
 #Genius-tile {
   background: url('../img/Genius-redesign/Genius-logo.svg');
-  background-size: 80% 80%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #FFE067;
-  height: 200px;
-  @media screen and (min-width: $break-medium) {
-    height: 450px;
-  }
+  // background-color: #FFE067;
+  @include tile-background;
 }
 
-.project-detail{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 8vw;
-  padding-right: 8vw;
-  margin-bottom: 100px;
-  @media screen and (min-width: $break-medium) {
-    line-height: 200%;
-    font-size: 125%;
-  }
-  ul{
-    list-style-type: square;
-    font-family: $font-karla-sans;
-    color: $charcoal;
-  }
-  a {
-    color: $text-color-light;
-  }
-}
 .link-icons {
   width: 100vw;
   margin: 50px 0;
@@ -396,11 +336,6 @@ nav{
     height: 50px;
     width: auto;
   }
-}
-.elypsis {
-  font-size: 2.5em;
-  text-align: center;
-  margin-bottom: 100px;
 }
 
 .brand-icon {
@@ -431,7 +366,7 @@ h2.view-more {
 }
 
 #contact-section {
-  font-family: $font-karla-sans;
+  font-family: $font-raleway;
   text-align: center;
   width: 100vw;
   margin-bottom: 10px;
