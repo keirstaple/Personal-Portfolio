@@ -58,50 +58,21 @@ body{
 //navbar
 nav{
   width: 100vw;
-  @media screen and (min-width: $break-medium){
-    width: 10vw;
-  }
+  position: fixed;
 }
 .nav-bar {
   background-color: $charcoal;
   padding-top: 1em;
   padding-bottom: 1em;
-  padding-left: 8vw;
-  padding-right: 8vw;
+  padding-right: 5vw;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: $break-medium){
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding-left: 0;
-    padding-right: 0;
-    width: 10vw;
-    min-width: 115px;
-    height: 100vh;
-  }
 }
 .picture-menu-icon {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: row;
   align-items: center;
-  @media screen and (min-width: $break-medium){
-    align-items: flex-start;
-    justify-content: center;
-    flex: 1;
-    position: relative;
-    width: 10vw;
-  }
-  img{
-    height: 75px;
-    width: auto;
-    @media screen and (min-width: $break-medium) {
-      height: 125px;
-      width: auto;
-    }
-  }
 }
 
 
@@ -113,18 +84,11 @@ nav{
   top: 50%;
   display: none;
   font-size: 1.5em;
-  @media screen and (min-width: $break-medium) {
-    flex: 2;
-    display: block;
-    width: 10vw;
-  }
   li{
     text-align: center;
     margin: 0 0 15px 0;
     color: #B2841B;
     margin-left: 0;
-    @media screen and (min-width: $break-medium){
-    }
   }
   a {
     text-decoration: none;
@@ -135,15 +99,15 @@ nav{
 
 //When user clicks the toggle icon, it sets class to .is-open
 .nav-links.is-open{
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .fa-bars {
   float: right;
   color: $text-color-light;
-  @media screen and (min-width: $break-medium) {
-    display: none;
-  }
 }
 
 
@@ -190,8 +154,7 @@ nav{
   padding-top: 100px;
   padding-bottom: 100px;
   @media screen and (min-width: $break-medium){
-    width: 90vw;
-    margin-left: 10vw;
+    width: 100vw;
   }
 }
 #about-section{

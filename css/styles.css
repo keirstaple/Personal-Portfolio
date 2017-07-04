@@ -25,50 +25,22 @@ body {
   padding: 0; }
 
 nav {
-  width: 100vw; }
-  @media screen and (min-width: 750px) {
-    nav {
-      width: 10vw; } }
+  width: 100vw;
+  position: fixed; }
 
 .nav-bar {
   background-color: #292929;
   padding-top: 1em;
   padding-bottom: 1em;
-  padding-left: 8vw;
-  padding-right: 8vw;
+  padding-right: 5vw;
   display: flex;
   flex-direction: column; }
-  @media screen and (min-width: 750px) {
-    .nav-bar {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      padding-left: 0;
-      padding-right: 0;
-      width: 10vw;
-      min-width: 115px;
-      height: 100vh; } }
 
 .picture-menu-icon {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: row;
   align-items: center; }
-  @media screen and (min-width: 750px) {
-    .picture-menu-icon {
-      align-items: flex-start;
-      justify-content: center;
-      flex: 1;
-      position: relative;
-      width: 10vw; } }
-  .picture-menu-icon img {
-    height: 75px;
-    width: auto; }
-    @media screen and (min-width: 750px) {
-      .picture-menu-icon img {
-        height: 125px;
-        width: auto; } }
 
 .nav-links {
   list-style-type: none;
@@ -78,11 +50,6 @@ nav {
   top: 50%;
   display: none;
   font-size: 1.5em; }
-  @media screen and (min-width: 750px) {
-    .nav-links {
-      flex: 2;
-      display: block;
-      width: 10vw; } }
   .nav-links li {
     text-align: center;
     margin: 0 0 15px 0;
@@ -94,14 +61,14 @@ nav {
     font-family: "Karla", sans-serif; }
 
 .nav-links.is-open {
-  display: block; }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end; }
 
 .fa-bars {
   float: right;
   color: #FEFAF2; }
-  @media screen and (min-width: 750px) {
-    .fa-bars {
-      display: none; } }
 
 .main {
   display: flex;
@@ -140,8 +107,7 @@ nav {
   padding-bottom: 100px; }
   @media screen and (min-width: 750px) {
     .section {
-      width: 90vw;
-      margin-left: 10vw; } }
+      width: 100vw; } }
 
 #about-section {
   display: flex;
