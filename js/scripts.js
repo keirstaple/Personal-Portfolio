@@ -22,8 +22,18 @@ $(document).ready(function(){
   });
 
   //When you scroll down the page, the popsicle stick svg stops bouncing
-  $(document).on('scroll', function(){
+  $(window).scroll({ previousTop: 0 }, function() {
     var toggleStatus = $('.mobile-nav-toggle').hasClass('is-open');
+    var currentTop = $(window).scrollTop();
+
+    if (currentTop < this.previousTop) {
+        $("nav").show().removeClass('animated slideOutUp');
+        $("nav").show().addClass('animated slideInDown');
+    } else {
+        $("nav").show().removeClass('animated slideInDown');
+        $("nav").hide().addClass('animated slideOutUp');
+    }
+    this.previousTop = currentTop;
     $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
     $('#Nose').addClass('animated pulse');
     if(toggleStatus) {
