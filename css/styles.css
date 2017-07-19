@@ -63,6 +63,10 @@ nav {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end; }
+  .nav-links.is-open li {
+    width: 100vw;
+    border-bottom: 1px solid white;
+    text-align: right; }
 
 .fa-bars {
   float: right;
