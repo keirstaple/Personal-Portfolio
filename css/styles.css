@@ -103,9 +103,11 @@ nav {
         height: 70vh; } }
 
 .section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  width: 100vw; }
+  width: 100vw;
+  padding: 25px 0; }
+  @media screen and (min-width: 750px) {
+    .section {
+      padding: 50px 0; } }
 
 #about-section {
   display: flex;
@@ -123,10 +125,11 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-left: 75px;
     margin-right: 75px;
-    margin-top: 25px;
-    margin-bottom: 25px; }
+    margin-top: 15px;
+    margin-bottom: 15px; }
   #about-section .education,
   #about-section .tech-skills,
   #about-section .additional-skills {
@@ -134,7 +137,9 @@ nav {
   @media screen and (min-width: 1200px) {
     #about-section .education-row {
       display: flex;
-      flex-direction: column; } }
+      flex-direction: column; }
+      #about-section .education-row > :nth-child(4) {
+        margin-top: 25px; } }
   #about-section .education-tech-icons {
     display: flex;
     flex-direction: column;
@@ -170,18 +175,18 @@ nav {
   #about-section h1 {
     font-size: 1.5em; }
   #about-section img.about-icon {
-    height: 2em;
-    width: auto;
+    width: 50px;
+    height: auto;
     margin: 5px; }
     @media screen and (min-width: 750px) {
       #about-section img.about-icon {
-        height: 3.5em; } }
+        width: 75px;
+        height: auto;
+        max-height: 100px; } }
     @media screen and (min-width: 1200px) {
       #about-section img.about-icon {
-        height: 4.5em; } }
-  @media screen and (min-width: 1200px) {
-    #about-section .education-row > img.about-icon:nth-child(n+2) {
-      width: 6em; } }
+        height: auto;
+        max-height: 100px; } }
 
 #projects-section {
   font-family: "Quicksand", sans-serif;
@@ -194,18 +199,24 @@ nav {
     margin: 25px;
     text-align: center; }
 
-#project-tiles {
+.project-tiles {
   display: flex;
   flex-direction: column; }
   @media screen and (min-width: 750px) {
-    #project-tiles {
+    .project-tiles {
       flex-direction: row;
       flex-wrap: wrap; } }
 
 .project {
-  height: 50vh;
-  width: 45vw;
-  background-color: #F2F1EF; }
+  margin: 0;
+  background-color: #F2F1EF;
+  margin: 15px 20px;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 750px) {
+    .project {
+      min-height: 50vh;
+      width: 45vw; } }
 
 .project-tile {
   float: left;
@@ -271,15 +282,11 @@ nav {
   width: 100px; }
 
 .link-icons {
-  width: 100vw;
-  margin: 50px 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center; }
-  @media screen and (min-width: 750px) {
-    .link-icons {
-      width: 90vw; } }
   .link-icons svg {
     margin-left: 20px;
     margin-right: 20px;
@@ -307,8 +314,15 @@ h2.view-more {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-.project-detail > h3.role {
-  margin-top: 50px; }
+.project-detail > .skinny {
+  font-size: 14px;
+  line-height: 18px; }
+
+h3.skinny {
+  text-decoration: underline; }
+
+h3.role {
+  text-decoration: underline; }
 
 #contact-section {
   font-family: "Raleway", sans-serif;

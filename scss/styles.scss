@@ -170,10 +170,12 @@ nav{
   }
 }
 
-.section{
-  padding-top: 100px;
-  padding-bottom: 100px;
+.section {
   width: 100vw;
+  padding: 25px 0;
+  @media screen and (min-width: $break-medium) {
+    padding: 50px 0;
+  }
 }
 #about-section{
   display: flex;
@@ -187,14 +189,15 @@ nav{
     align-items: flex-start;
     justify-content: center;
   }
-  .row{
+  .row {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-left: 75px;
     margin-right: 75px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   .education,
   .tech-skills,
@@ -205,6 +208,9 @@ nav{
     @media screen and (min-width: $break-large) {
       display: flex;
       flex-direction: column;
+      >:nth-child(4) {
+        margin-top: 25px;
+      }
     }
   }
   .education-tech-icons {
@@ -243,26 +249,21 @@ nav{
       margin: 0.5em;
     }
   }
-  h1{
+  h1 {
     font-size: 1.5em;
   }
-  img.about-icon{
-    height: 2em;
-    width: auto;
+  img.about-icon {
+    width: 50px;
+    height: auto;
     margin: 5px;
     @media screen and (min-width: $break-medium){
-      height: 3.5em;
+      width: 75px;
+      height: auto;
+      max-height: 100px;
     }
     @media screen and (min-width: $break-large) {
-      height: 4.5em;
-      // &:hover {
-      //   height: 5.5em;
-      // }
-    }
-  }
-  .education-row > img.about-icon:nth-child(n+2) {
-    @media screen and (min-width: $break-large) {
-      width: 6em;
+      height: auto;
+      max-height: 100px;
     }
   }
 }
@@ -282,7 +283,7 @@ nav{
     text-align: center;
   }
 }
-#project-tiles {
+.project-tiles {
   display: flex;
   flex-direction: column;
   @media screen and (min-width: $break-medium) {
@@ -291,9 +292,15 @@ nav{
   }
 }
 .project {
-  height: 50vh;
-  width: 45vw;
+  margin: 0;
   background-color: $light-grey;
+  margin: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $break-medium) {
+    min-height: 50vh;
+    width: 45vw;
+  }
 }
 .project-tile {
   float: left;
@@ -327,14 +334,14 @@ nav{
 }
 
 .link-icons {
-  width: 100vw;
-  margin: 50px 0;
+  width: 100%;
+  // margin: 50px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   @media screen and (min-width: $break-medium) {
-    width: 90vw;
+    // width: 90vw;
   }
   svg {
     margin-left: 20px;
@@ -368,9 +375,18 @@ h2.view-more {
   margin-bottom: 10px;
 }
 .project-detail > h3.role {
-  margin-top: 50px;
+  // margin-top: 50px;
 }
-
+.project-detail > .skinny {
+  font-size: 14px;
+  line-height: 18px;
+}
+h3.skinny {
+  text-decoration: underline;
+}
+h3.role {
+  text-decoration: underline;
+}
 #contact-section {
   font-family: $font-raleway;
   text-align: center;
