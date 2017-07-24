@@ -286,6 +286,7 @@ nav{
 .project-tiles {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   @media screen and (min-width: $break-medium) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -386,6 +387,31 @@ h3.skinny {
 }
 h3.role {
   text-decoration: underline;
+}
+
+h4.skinny {
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 5.2em;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+}
+h4.skinny:before {
+  content: '...';
+  position: absolute;
+  right: 4px;
+  bottom: 0;
+}
+h4.skinny:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
 }
 #contact-section {
   font-family: $font-raleway;
