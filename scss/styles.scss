@@ -35,7 +35,7 @@ $font-quicksand: 'Quicksand', sans-serif;
 $font-raleway: 'Raleway', sans-serif;
 
 $text-color-light: #FEFAF2;
-$light-grey: #F2F1EF;
+$light-grey: #f7f7f7;
 $reddish: #E88B96;
 $orangish: #FFDEBA;
 $bluish: #99C2FF;
@@ -47,9 +47,11 @@ $charcoal: #292929;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: $light-grey;
-  height: 100px;
-  width: 100px;
+  margin-bottom: 10px;
+  height: 125px;
+  width: 125px;
+  border-radius: 5px;
+  padding: 5px;
 };
 //
 
@@ -183,6 +185,9 @@ nav{
   align-items: center;
   justify-content: flex-start;
   font-family: Moderne Sans;
+  h1 {
+    font-family: $font-quicksand;
+  }
   @media screen and (min-width: $break-medium){
     flex-direction: row;
     flex-wrap: wrap;
@@ -273,13 +278,16 @@ nav{
 #projects-section{
   font-family: $font-quicksand;
   background-color: white;
-  color: $text-color-light;
+  color: $charcoal;
+  h3 {
+    font-weight: bold;
+  }
   h3, h4 {
     font-family: $font-raleway;
     color: $charcoal;
   }
   #projects-header {
-    margin: 25px;
+    margin: 15px;
     text-align: center;
   }
 }
@@ -298,13 +306,20 @@ nav{
   margin: 15px 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  &:hover {
+    box-shadow: 0 0 1rem rgba(0,0,0,.6);
+    background-color: rgba(255,255,255,.25);
+    -webkit-transition: box-shadow 500ms; /* Safari */
+    transition: box-shadow 500ms;
+  }
   @media screen and (min-width: $break-medium) {
     min-height: 50vh;
     width: 45vw;
   }
 }
 .project-tile {
-  float: left;
   @include tile-background;
 }
 #hd-tile {
@@ -316,7 +331,7 @@ nav{
   @include tile-background;
 }
 #hack-tile {
-  background: url('http://civicpdx.org/assets/civic-logo-invert-animated.svg');
+  background: url('../img/portfolio-icons/hackoregon.png');
   @include tile-background;
 }
 
@@ -327,6 +342,9 @@ nav{
 #pARTicipate-tile{
   background: url('../img/pARTicipate_screenshots/participate.png');
   @include tile-background;
+  margin-bottom: 35px;
+  height: 125px;
+  width: 125px;
 }
 #Genius-tile {
   background: url('../img/Genius-redesign/Genius-logo.svg');
@@ -336,19 +354,16 @@ nav{
 
 .link-icons {
   width: 100%;
-  // margin: 50px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  @media screen and (min-width: $break-medium) {
-    // width: 90vw;
-  }
   svg {
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 25px;
     width: auto;
+    cursor: pointer;
   }
 }
 
@@ -361,32 +376,22 @@ h2.view-more {
   text-align: center;
 }
 
-#hd-detail,
-#potato-detail,
-#hack-detail,
-#badgers-detail,
-#pARTicipate-detail,
-#lousyLifehacks-detail,
-#Genius-detail {
-  padding-left: 8vw;
-  padding-right: 8vw;
+.project-detail {
+  padding: 0 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -25px;
 }
 .project-detail > h3, h4, h5, ul, li {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px auto;
 }
-.project-detail > h3.role {
-  // margin-top: 50px;
+.project-detail .role {
+  font-weight: bold;
 }
-.project-detail > .skinny {
+.project-detail > h4.skinny {
   font-size: 14px;
   line-height: 18px;
-}
-h3.skinny {
-  text-decoration: underline;
-}
-h3.role {
-  text-decoration: underline;
 }
 
 h4.skinny {
@@ -411,7 +416,7 @@ h4.skinny:after {
   width: 1em;
   height: 1em;
   margin-top: 0.2em;
-  background: white;
+  background: $light-grey;
 }
 #contact-section {
   font-family: $font-raleway;
@@ -425,11 +430,13 @@ h4.skinny:after {
   }
   svg{
     margin: 40px;
-    height: 50px;
+    height: 35px;
     width: auto;
   }
 }
-
+#contact-section a {
+  text-decoration: none;
+}
 .reddish {
   g > g {
     fill: $reddish;

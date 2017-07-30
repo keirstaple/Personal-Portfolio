@@ -115,6 +115,8 @@ nav {
   align-items: center;
   justify-content: flex-start;
   font-family: Moderne Sans; }
+  #about-section h1 {
+    font-family: "Quicksand", sans-serif; }
   @media screen and (min-width: 750px) {
     #about-section {
       flex-direction: row;
@@ -191,12 +193,14 @@ nav {
 #projects-section {
   font-family: "Quicksand", sans-serif;
   background-color: white;
-  color: #FEFAF2; }
+  color: #292929; }
+  #projects-section h3 {
+    font-weight: bold; }
   #projects-section h3, #projects-section h4 {
     font-family: "Raleway", sans-serif;
     color: #292929; }
   #projects-section #projects-header {
-    margin: 25px;
+    margin: 15px;
     text-align: center; }
 
 .project-tiles {
@@ -210,77 +214,101 @@ nav {
 
 .project {
   margin: 0;
-  background-color: #F2F1EF;
+  background-color: #f7f7f7;
   margin: 15px 20px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; }
+  .project:hover {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.25);
+    -webkit-transition: box-shadow 500ms;
+    /* Safari */
+    transition: box-shadow 500ms; }
   @media screen and (min-width: 750px) {
     .project {
       min-height: 50vh;
       width: 45vw; } }
 
 .project-tile {
-  float: left;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #F2F1EF;
-  height: 100px;
-  width: 100px; }
+  margin-bottom: 10px;
+  height: 125px;
+  width: 125px;
+  border-radius: 5px;
+  padding: 5px; }
 
 #hd-tile {
   background: url("../img/quote-center/HomeDepot.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #F2F1EF;
-  height: 100px;
-  width: 100px; }
+  margin-bottom: 10px;
+  height: 125px;
+  width: 125px;
+  border-radius: 5px;
+  padding: 5px; }
 
 #potato-tile {
   background: url("../img/potato-potato/logo_wordmark_2.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #F2F1EF;
-  height: 100px;
-  width: 100px; }
+  margin-bottom: 10px;
+  height: 125px;
+  width: 125px;
+  border-radius: 5px;
+  padding: 5px; }
 
 #hack-tile {
-  background: url("http://civicpdx.org/assets/civic-logo-invert-animated.svg");
+  background: url("../img/portfolio-icons/hackoregon.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #F2F1EF;
-  height: 100px;
-  width: 100px; }
+  margin-bottom: 10px;
+  height: 125px;
+  width: 125px;
+  border-radius: 5px;
+  padding: 5px; }
 
 #badgers-tile {
   background: url("../img/badgers/badgers-name.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #F2F1EF;
-  height: 100px;
-  width: 100px; }
+  margin-bottom: 10px;
+  height: 125px;
+  width: 125px;
+  border-radius: 5px;
+  padding: 5px; }
 
 #pARTicipate-tile {
   background: url("../img/pARTicipate_screenshots/participate.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #F2F1EF;
-  height: 100px;
-  width: 100px; }
+  margin-bottom: 10px;
+  height: 125px;
+  width: 125px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 35px;
+  height: 125px;
+  width: 125px; }
 
 #Genius-tile {
   background: url("../img/Genius-redesign/Genius-logo.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #F2F1EF;
-  height: 100px;
-  width: 100px; }
+  margin-bottom: 10px;
+  height: 125px;
+  width: 125px;
+  border-radius: 5px;
+  padding: 5px; }
 
 .link-icons {
   width: 100%;
@@ -289,10 +317,11 @@ nav {
   align-items: center;
   justify-content: center; }
   .link-icons svg {
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 50px;
-    width: auto; }
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 25px;
+    width: auto;
+    cursor: pointer; }
 
 .brand-icon {
   height: 50px;
@@ -301,29 +330,22 @@ nav {
 h2.view-more {
   text-align: center; }
 
-#hd-detail,
-#potato-detail,
-#hack-detail,
-#badgers-detail,
-#pARTicipate-detail,
-#lousyLifehacks-detail,
-#Genius-detail {
-  padding-left: 8vw;
-  padding-right: 8vw; }
+.project-detail {
+  padding: 0 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -25px; }
 
 .project-detail > h3, h4, h5, ul, li {
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  margin: 10px auto; }
 
-.project-detail > .skinny {
+.project-detail .role {
+  font-weight: bold; }
+
+.project-detail > h4.skinny {
   font-size: 14px;
   line-height: 18px; }
-
-h3.skinny {
-  text-decoration: underline; }
-
-h3.role {
-  text-decoration: underline; }
 
 h4.skinny {
   overflow: hidden;
@@ -347,7 +369,7 @@ h4.skinny:after {
   width: 1em;
   height: 1em;
   margin-top: 0.2em;
-  background: white; }
+  background: #f7f7f7; }
 
 #contact-section {
   font-family: "Raleway", sans-serif;
@@ -361,8 +383,11 @@ h4.skinny:after {
       margin-left: 10vw; } }
   #contact-section svg {
     margin: 40px;
-    height: 50px;
+    height: 35px;
     width: auto; }
+
+#contact-section a {
+  text-decoration: none; }
 
 .reddish g > g {
   fill: #E88B96; }
