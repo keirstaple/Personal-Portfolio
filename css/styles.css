@@ -215,21 +215,62 @@ nav {
 .project {
   margin: 0;
   background-color: #f7f7f7;
+  border-radius: 2px;
   margin: 15px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px; }
-  .project:hover {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
-    background-color: rgba(255, 255, 255, 0.25);
-    -webkit-transition: box-shadow 500ms;
-    /* Safari */
-    transition: box-shadow 500ms; }
+  padding: 10px;
+  transition: box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .project:not(.fullscreen) h4.skinny {
+    display: block;
+    /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 500px;
+    max-height: 4.7em;
+    /* Fallback for non-webkit */
+    margin: 0 auto;
+    font-size: 0.85em;
+    line-height: 1.2em;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .project:hover:not(.fullscreen) {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .project .fa.fa-times {
+    display: none; }
   @media screen and (min-width: 750px) {
     .project {
       min-height: 50vh;
-      width: 45vw; } }
+      width: 45vw; }
+      .project:hover:not(.fullscreen) {
+        cursor: pointer; } }
+
+.project-wrapper.fullscreen {
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .project-wrapper.fullscreen .fa.fa-times {
+    display: block;
+    align-self: flex-end;
+    cursor: pointer; }
+  .project-wrapper.fullscreen .project {
+    height: 85%;
+    width: 85%;
+    box-shadow: none;
+    cursor: auto; }
+  .project-wrapper.fullscreen .project-detail {
+    width: 50%; }
 
 .project-tile {
   background-position: center;
@@ -331,7 +372,7 @@ h2.view-more {
   text-align: center; }
 
 .project-detail {
-  padding: 0 8vw;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -346,30 +387,6 @@ h2.view-more {
 .project-detail > h4.skinny {
   font-size: 14px;
   line-height: 18px; }
-
-h4.skinny {
-  overflow: hidden;
-  position: relative;
-  line-height: 1.2em;
-  max-height: 5.2em;
-  text-align: justify;
-  margin-right: -1em;
-  padding-right: 1em; }
-
-h4.skinny:before {
-  content: '...';
-  position: absolute;
-  right: 4px;
-  bottom: 0; }
-
-h4.skinny:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  width: 1em;
-  height: 1em;
-  margin-top: 0.2em;
-  background: #f7f7f7; }
 
 #contact-section {
   font-family: "Raleway", sans-serif;
