@@ -61,4 +61,16 @@ $(document).ready(function(){
         var status = $(this).hasClass('animated pulse reddish');
         if(status){ $(this).removeClass('animated pulse reddish'); }
       });
+
+  $(document).on('click', '.project-wrapper', function() {
+    $(this).removeClass('project-wrapper').addClass('project-wrapper-fullscreen');
+    $('body').css({'overflow': 'hidden'});
+    $(this).css({'overflow': 'scroll'});
+  });
+
+  $(document).on('click', '.close-button', function() {
+    $('.project-wrapper-fullscreen').removeClass('project-wrapper-fullscreen').addClass('project-wrapper');
+    // $(this).parent().parent().addClass('project-wrapper');
+    $('body').css({'overflow': 'auto'});
+  });
 });
