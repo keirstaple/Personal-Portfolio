@@ -63,12 +63,13 @@ $(document).ready(function(){
   $(document).on('click touchstart', '.project-wrapper', function() {
     $(this).removeClass('project-wrapper').addClass('project-wrapper-fullscreen');
     $('body').css({'overflow': 'hidden'});
+    $('.project-wrapper').css({'display': 'none'});
     $(this).css({'overflow': 'scroll'});
   });
 
   $(document).on('click touchstart', '.close-button', function() {
+    $('.project-wrapper').css({'display': 'block'});
     $('.project-wrapper-fullscreen').removeClass('project-wrapper-fullscreen').addClass('project-wrapper');
-    // $(this).parent().parent().addClass('project-wrapper');
     $('body').css({'overflow': 'auto'});
   });
 });
