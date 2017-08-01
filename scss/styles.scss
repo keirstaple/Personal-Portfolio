@@ -310,14 +310,16 @@ nav{
   align-items: center;
   padding: 10px;
   transition: box-shadow 0.5s cubic-bezier(.25,.8,.25,1);
-  &:hover:not(.project-wrapper-fullscreen) {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  @media screen and (min-width: $break-medium) {
+    &:hover:not(.project-wrapper-fullscreen) {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
   }
   .close-button {
     display: none;
   }
   @media screen and (min-width: $break-medium) {
-    min-height: 50vh;
+    height: 60vh;
     width: 45vw;
     &:hover:not(.project-wrapper-fullscreen) {
       cursor: pointer;
@@ -372,6 +374,11 @@ nav{
   }
   .project-detail {
     width: 50%;
+  }
+  @media screen and (max-width: $break-medium) {
+    .project-detail {
+      width: 80%;
+    }
   }
 }
 
@@ -458,12 +465,11 @@ h2.view-more {
   margin-bottom: 10px;
   @media screen and (min-width: $break-medium) {
     height: 50vh;
-    width: 90vw;
-    margin-left: 10vw;
+    width: 100%;
   }
   svg{
-    margin: 40px;
-    height: 35px;
+    margin: 25px;
+    height: 25px;
     width: auto;
   }
 }

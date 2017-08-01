@@ -222,13 +222,14 @@ nav {
   align-items: center;
   padding: 10px;
   transition: box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  .project:hover:not(.project-wrapper-fullscreen) {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  @media screen and (min-width: 750px) {
+    .project:hover:not(.project-wrapper-fullscreen) {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); } }
   .project .close-button {
     display: none; }
   @media screen and (min-width: 750px) {
     .project {
-      min-height: 50vh;
+      height: 60vh;
       width: 45vw; }
       .project:hover:not(.project-wrapper-fullscreen) {
         cursor: pointer; } }
@@ -273,6 +274,9 @@ nav {
     overflow: auto; }
   .project-wrapper-fullscreen .project-detail {
     width: 50%; }
+  @media screen and (max-width: 750px) {
+    .project-wrapper-fullscreen .project-detail {
+      width: 80%; } }
 
 .project-tile {
   background-position: center;
@@ -398,11 +402,10 @@ h2.view-more {
   @media screen and (min-width: 750px) {
     #contact-section {
       height: 50vh;
-      width: 90vw;
-      margin-left: 10vw; } }
+      width: 100%; } }
   #contact-section svg {
-    margin: 40px;
-    height: 35px;
+    margin: 25px;
+    height: 25px;
     width: auto; }
 
 #contact-section a {
