@@ -25,13 +25,12 @@ $(document).ready(function(){
   $(window).scroll({ previousTop: 0 }, function() {
     var toggleStatus = $('.mobile-nav-toggle').hasClass('is-open');
     var currentTop = $(window).scrollTop();
-
-    if (currentTop < this.previousTop) {
-        $("nav").show().removeClass('animated slideOutUp');
-        $("nav").show().addClass('animated slideInDown');
+    console.log('prev', this.previousTop);
+    console.log('current', currentTop);
+    if (currentTop < this.previousTop || currentTop <= 0) {
+        $("nav").show();
     } else {
-        $("nav").show().removeClass('animated slideInDown');
-        $("nav").hide().addClass('animated slideOutUp');
+        $("nav").hide();
     }
     this.previousTop = currentTop;
     $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
