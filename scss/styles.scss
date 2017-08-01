@@ -123,7 +123,7 @@ nav{
   align-items: flex-end;
 
   li {
-    width: 100vw;
+    width: 100%;
     border-bottom: 1px solid white;
     text-align: right;
   }
@@ -441,7 +441,7 @@ h2.view-more {
   margin-top: -25px;
 }
 .project-detail > h3, h4, h5, ul, li {
-  margin: 10px auto;
+  margin: 10px 0;
 }
 .project-detail .role {
   font-weight: bold;
