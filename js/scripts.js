@@ -25,12 +25,11 @@ $(document).ready(function(){
   $(window).scroll({ previousTop: 0 }, function() {
     var toggleStatus = $('.mobile-nav-toggle').hasClass('is-open');
     var currentTop = $(window).scrollTop();
-    console.log('prev', this.previousTop);
-    console.log('current', currentTop);
+
     if (currentTop < this.previousTop || currentTop <= 0) {
-        $("nav").show();
+      $("nav").show();
     } else {
-        $("nav").hide();
+      $("nav").hide();
     }
     this.previousTop = currentTop;
     $('.animated, .bounce, .infinite').removeClass('animated bounce infinite');
@@ -51,23 +50,23 @@ $(document).ready(function(){
       if(status){ $(this).removeClass('animated pulse'); }
     });
 
-    $('.brand-icon')
-      .mouseover(function(){
-        var status = $(this).hasClass('animated pulse reddish');
-        if(!status){ $(this).addClass('animated pulse reddish'); }
-      })
-      .mouseout(function(){
-        var status = $(this).hasClass('animated pulse reddish');
-        if(status){ $(this).removeClass('animated pulse reddish'); }
-      });
+  $('.brand-icon')
+    .mouseover(function(){
+      var status = $(this).hasClass('animated pulse reddish');
+      if(!status){ $(this).addClass('animated pulse reddish'); }
+    })
+    .mouseout(function(){
+      var status = $(this).hasClass('animated pulse reddish');
+      if(status){ $(this).removeClass('animated pulse reddish'); }
+    });
 
-  $(document).on('click', '.project-wrapper', function() {
+  $(document).on('click touchstart', '.project-wrapper', function() {
     $(this).removeClass('project-wrapper').addClass('project-wrapper-fullscreen');
     $('body').css({'overflow': 'hidden'});
     $(this).css({'overflow': 'scroll'});
   });
 
-  $(document).on('click', '.close-button', function() {
+  $(document).on('click touchstart', '.close-button', function() {
     $('.project-wrapper-fullscreen').removeClass('project-wrapper-fullscreen').addClass('project-wrapper');
     // $(this).parent().parent().addClass('project-wrapper');
     $('body').css({'overflow': 'auto'});
