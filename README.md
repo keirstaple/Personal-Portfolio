@@ -14,6 +14,7 @@ _This is my personal portfolio page. It displays my skills and some projects I h
 * _Clone this project to your local drive_
 * _Create a new branch for your personal edits and viewing_
 * _If you want edits to be included, push them back to your Github account and create a pull request_
+* _To compile SCSS, run sass --watch scss/styles.scss:css/styles.css_
 
 ## Known Bugs
 
